@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dialogue.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Joust.unity
+    guid: 938ca713b1526e247acca44202c53a90
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 258632735dc33fd489925bf3929f7990
+  - enabled: 1
+    path: Assets/Scenes/Preparation.unity
+    guid: bf53b3104f9ea914f9b3965b424232bb
   m_configObjects: {}
