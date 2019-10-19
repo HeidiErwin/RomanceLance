@@ -16,17 +16,26 @@ public class TextLibrary : MonoBehaviour
     //To use the dialogue in the text of the scene, set the GameObject with the
     //  appropriate TextLibrary to the public "dialogue" field of the
     //  TextManager component of the scene's canvas ojbect.
-    public string[] textLines = new string[0];
+    public string[] textLines = new string[3];
+    private int dialogueSelected;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        dialogueSelected = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            dialogueSelected++;
+            if(dialogueSelected == 3)
+            {
+                GameObject mas = GameObject.Find("MasterObject");
+                mas.GetComponent<BaseScript>().NextLevel("Preparation");
+            }
+        }
     }
 }

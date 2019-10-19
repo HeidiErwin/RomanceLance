@@ -16,6 +16,12 @@ public class LevelManager : MonoBehaviour {
         SceneManager.LoadScene("Dialogue");
     }
 
+    public void SwitchScene(string nextScene)
+    {
+        GameObject mas = GameObject.Find("MasterObject");
+        mas.GetComponent<BaseScript>().NextLevel(nextScene);
+    }
+
     public void Joust() {
         SceneManager.LoadScene("Joust");
     }
@@ -31,4 +37,5 @@ public class LevelManager : MonoBehaviour {
     public void ShowInstructions() {
         SceneManager.LoadScene("Instructions");
     }
+
 }
