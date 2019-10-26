@@ -34,7 +34,18 @@ public class TextManager : MonoBehaviour
             //Conditional to prevent accessing an invalid index.
             if (!(textIndex >= lines.Length))
             {
-                txt.text = txt.text = lines[textIndex];
+                //Enables use of an escape sequence in the library
+                //  If "--choice" appears as a line in the array,
+                //  this code will run rather than update the text
+                //  in the dialogue box.
+                if (lines[textIndex] == "--break")
+                {
+
+                }
+                else
+                {
+                    txt.text = lines[textIndex];
+                }
             }
         }
     }
