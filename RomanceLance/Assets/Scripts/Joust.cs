@@ -9,13 +9,22 @@ public class Joust : MonoBehaviour
     [SerializeField] Image intenseEyes;
     [SerializeField] GameObject player;
     [SerializeField] GameObject npc;
+    private int hearts;
 
     private float runTime = 2.5f; // how long it takes the characters to run across the screen
 
     public bool charactersMoving = false;
 
     private void Start() {
+         GameObject mas = GameObject.Find("MasterObject");
+         int shirt = mas.GetComponent<BaseScript>().shirtNumber;
+         int steed = mas.GetComponent<BaseScript>().steedNumber;
+         int lance = mas.GetComponent<BaseScript>().lanceNumber;
+         mas.GetComponent<BaseScript>().della.checkChoices(shirt, steed, lance);
+         hearts = mas.GetComponent<BaseScript>().della.getLoveMeter();
          StartJoust();
+         player.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = BaseScript.currentShirt;
+         player.transform.GetChild(1).gameObject.GetComponent<SpriteRenderer>().sprite = BaseScript.currentSteed;
     }
 
     public void StartJoust() {
@@ -44,6 +53,14 @@ public class Joust : MonoBehaviour
 
     public void ShowIntenseEyes() {
         intenseEyes.gameObject.SetActive(true);
+        for(int i = 0; i<3; i++)
+        {
+            intenseEyes.transform.GetChild(0).transform.GetChild(i).gameObject.SetActive(false);
+        }
+        for(int i = 0; i<hearts; i++)
+        {
+            intenseEyes.transform.GetChild(0).transform.GetChild(i).gameObject.SetActive(true);
+        }
     }
 
     public void HideIntenseEyes() {

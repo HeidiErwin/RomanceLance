@@ -28,14 +28,6 @@ public class TextLibrary : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            //dialogueSelected++;
-            if(dialogueSelected == 3)
-            {
-                //GameObject mas = GameObject.Find("MasterObject");
-                //mas.GetComponent<BaseScript>().NextLevel("Preparation");
-            }
-        }
+
     }
 }

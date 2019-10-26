@@ -50,6 +50,11 @@ public class TextManager : MonoBehaviour
                     txt.text = lines[textIndex];
                 }
             }
+            if(textIndex == 3)
+            {
+                GameObject mas = GameObject.Find("MasterObject");
+                mas.GetComponent<BaseScript>().NextLevel("Preparation");
+            }
         }
     }
 
