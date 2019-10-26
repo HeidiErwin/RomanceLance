@@ -30,11 +30,11 @@ public class TextLibrary : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            dialogueSelected++;
+            //dialogueSelected++;
             if(dialogueSelected == 3)
             {
-                GameObject mas = GameObject.Find("MasterObject");
-                mas.GetComponent<BaseScript>().NextLevel("Preparation");
+                //GameObject mas = GameObject.Find("MasterObject");
+                //mas.GetComponent<BaseScript>().NextLevel("Preparation");
             }
         }
     }

@@ -10,6 +10,8 @@ public class TextManager : MonoBehaviour
     public GameObject dialogue;
     int textIndex = 0;
     string[] lines;
+    public GameObject button1;
+    public GameObject button2;
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +42,8 @@ public class TextManager : MonoBehaviour
                 //  in the dialogue box.
                 if (lines[textIndex] == "--break")
                 {
-
+                    button1.SetActive(true);
+                    button2.SetActive(true);
                 }
                 else
                 {
@@ -48,5 +51,14 @@ public class TextManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void changeDialogue(GameObject newDialogue)
+    {
+        dialogue = newDialogue;
+        textIndex = 0;
+        Start();
+        button1.SetActive(false);
+        button2.SetActive(false);
     }
 }
