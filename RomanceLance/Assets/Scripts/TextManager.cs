@@ -32,7 +32,10 @@ public class TextManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            textIndex++;
+            if (!button1.activeSelf)
+            {
+                textIndex++;
+            }
             //Conditional to prevent accessing an invalid index.
             if (!(textIndex >= lines.Length))
             {
@@ -50,14 +53,14 @@ public class TextManager : MonoBehaviour
                     txt.text = lines[textIndex];
                 }
             }
-            if(textIndex == 3)
+            else
             {
                 GameObject mas = GameObject.Find("MasterObject");
                 mas.GetComponent<BaseScript>().NextLevel("Preparation");
             }
         }
     }
-
+    //This is called when player chooses an option
     public void changeDialogue(GameObject newDialogue)
     {
         dialogue = newDialogue;
