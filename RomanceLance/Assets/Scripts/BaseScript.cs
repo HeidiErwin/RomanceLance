@@ -15,9 +15,11 @@ public class BaseScript : MonoBehaviour
     public NPC della;
     public NPC person2;
     public NPC cyrille;
+    public int currentNPC;
 
     private void Start()
     {
+        currentNPC = 0;
         shirtNumber = 0;
         steedNumber = 0;
         lanceNumber = 0;
@@ -26,6 +28,33 @@ public class BaseScript : MonoBehaviour
         cyrille = new NPC("Cyrille", 2, 2, 2);
         SceneManager.LoadScene("Menu", LoadSceneMode.Additive);
         currentLevel = "Menu";
+    }
+    public NPC getNPC()
+    {
+        if(currentNPC == 0)
+        {
+            return della;
+        }
+        if(currentNPC == 1)
+        {
+            return person2;
+        }
+        if(currentNPC == 2)
+        {
+            return cyrille;
+        }
+        return della;
+    }
+    public void incrementNPC()
+    {
+        if (currentNPC < 3)
+        {
+            currentNPC++;
+        }
+        else
+        {
+            currentNPC = 0;
+        }
     }
     public void NextLevel(string nextLevel)
     {

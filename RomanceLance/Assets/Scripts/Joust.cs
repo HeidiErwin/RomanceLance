@@ -20,8 +20,8 @@ public class Joust : MonoBehaviour
          int shirt = mas.GetComponent<BaseScript>().shirtNumber;
          int steed = mas.GetComponent<BaseScript>().steedNumber;
          int lance = mas.GetComponent<BaseScript>().lanceNumber;
-         mas.GetComponent<BaseScript>().della.checkChoices(shirt, steed, lance);
-         hearts = mas.GetComponent<BaseScript>().della.getLoveMeter();
+         mas.GetComponent<BaseScript>().getNPC().checkChoices(shirt, steed, lance);
+         hearts = mas.GetComponent<BaseScript>().getNPC().getLoveMeter();
          StartJoust();
          player.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = BaseScript.currentShirt;
          player.transform.GetChild(1).gameObject.GetComponent<SpriteRenderer>().sprite = BaseScript.currentSteed;
@@ -38,9 +38,10 @@ public class Joust : MonoBehaviour
         yield return null;
     }
 
-    private void RunSecondHalf() {
+    public void RunSecondHalf() {
         StartCoroutine(MoveToPosition(npc.transform, new Vector3(-8, .5f, 0), runTime));
         StartCoroutine(MoveToPosition(player.transform, new Vector3(8, -.5f, 0), runTime));
+        StartCoroutine(WaitThenChangeScene());
     }
 
     IEnumerator WaitThenRunSecondHalf() {
@@ -49,6 +50,14 @@ public class Joust : MonoBehaviour
         yield return new WaitForSeconds(1f);
         HideIntenseEyes();
         RunSecondHalf();
+    }
+
+    IEnumerator WaitThenChangeScene()
+    {
+        yield return new WaitForSeconds(runTime);
+        GameObject mas = GameObject.Find("MasterObject");
+        mas.GetComponent<BaseScript>().incrementNPC();
+        mas.GetComponent<BaseScript>().NextLevel("Dialogue");
     }
 
     public void ShowIntenseEyes() {
