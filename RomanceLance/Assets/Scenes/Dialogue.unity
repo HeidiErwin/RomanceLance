@@ -525,7 +525,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30, y: 204}
+  m_AnchoredPosition: {x: 30, y: -29.000046}
   m_SizeDelta: {x: 438.3, y: 55.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1140101609
@@ -582,6 +582,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 2039168338}
+        m_MethodName: GoodOptionPicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1140101610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -879,8 +890,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 22, y: -80.942}
-  m_SizeDelta: {x: 918, y: 918.05}
+  m_AnchoredPosition: {x: 30, y: -294}
+  m_SizeDelta: {x: 769.7, y: 1399.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1552381192
 MonoBehaviour:
@@ -900,7 +911,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: aba1f0b9344022445b3476bf2f8d5e37, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 08f93c6728ceeca4d981125df2388e95, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1001,7 +1012,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30, y: 92}
+  m_AnchoredPosition: {x: 30, y: -141}
   m_SizeDelta: {x: 438.3, y: 55.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1714125505
@@ -1215,6 +1226,7 @@ MonoBehaviour:
   dialogue: {fileID: 218888111}
   button1: {fileID: 1140101607}
   button2: {fileID: 1714125503}
+  textInMotion: 0
 --- !u!1 &2113325955
 GameObject:
   m_ObjectHideFlags: 0

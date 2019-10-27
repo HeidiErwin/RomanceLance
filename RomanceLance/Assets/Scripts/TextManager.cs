@@ -12,6 +12,8 @@ public class TextManager : MonoBehaviour
     string[] lines;
     public GameObject button1;
     public GameObject button2;
+    public bool textInMotion = false; // is NPC still speaking (i.e. text is still moving as letters appear one by one)
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +26,7 @@ public class TextManager : MonoBehaviour
         //Avoids catastrophic failure if the array is empty.
         if (lines.Length != 0)
         {
-            txt.text = lines[textIndex];
+            DisplayText(lines[textIndex]);
         }
     }
 
@@ -50,7 +52,7 @@ public class TextManager : MonoBehaviour
                 }
                 else
                 {
-                    txt.text = lines[textIndex];
+                    DisplayText(lines[textIndex]);
                 }
             }
             else
@@ -60,6 +62,7 @@ public class TextManager : MonoBehaviour
             }
         }
     }
+
     //This is called when player chooses an option
     public void changeDialogue(GameObject newDialogue)
     {
@@ -69,4 +72,25 @@ public class TextManager : MonoBehaviour
         button1.SetActive(false);
         button2.SetActive(false);
     }
+
+    public void DisplayText(string sentence) {
+        StopAllCoroutines(); // to ensure we don't keep animating old sentence if user moves on
+        StartCoroutine(TypeSentence(sentence));
+    }
+
+    IEnumerator TypeSentence(string sentence) {
+        textInMotion = true;
+        txt.text = "";
+        foreach (char letter in sentence.ToCharArray()) {
+            txt.text += letter;
+            yield return null; // wait until next frame before continuing execution
+        }
+        textInMotion = false;
+    }
+
+    public void GoodOptionPicked() {
+        GameObject mas = GameObject.Find("MasterObject");
+        mas.GetComponent<BaseScript>().getNPC().goodDialogue();
+    }
+
 }
