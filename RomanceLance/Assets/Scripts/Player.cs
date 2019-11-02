@@ -19,6 +19,13 @@ public class Player : MonoBehaviour
     [SerializeField] Sprite limescooter;
     [SerializeField] Sprite crocs;
     [SerializeField] Sprite pattyMobile;
+    [SerializeField] Image lance;
+    [SerializeField] Sprite lance1;
+    [SerializeField] Sprite lance2;
+    [SerializeField] Sprite lance3;
+    [SerializeField] Sprite lance4;
+    [SerializeField] Sprite lance5;
+    [SerializeField] Sprite lance6;
     public Sprite currentShirt;
     public Sprite currentLance;
     public Sprite currentSteed;
@@ -71,7 +78,48 @@ public class Player : MonoBehaviour
     }
     public void changeLance(int index)
     {
-
+        if (index == 0)
+        {
+            lance.sprite = lance1;
+            GameObject mas = GameObject.Find("MasterObject");
+            mas.GetComponent<BaseScript>().setLance(lance.sprite, 0);
+            currentLance = lance.sprite;
+        }
+        if (index == 1)
+        {
+            lance.sprite = lance2;
+            GameObject mas = GameObject.Find("MasterObject");
+            mas.GetComponent<BaseScript>().setLance(lance.sprite, 1);
+            currentLance = lance.sprite;
+        }
+        if (index == 2)
+        {
+            lance.sprite = lance3;
+            GameObject mas = GameObject.Find("MasterObject");
+            mas.GetComponent<BaseScript>().setLance(lance.sprite, 2);
+            currentLance = lance.sprite;
+        }
+        if (index == 3)
+        {
+            lance.sprite = lance4;
+            GameObject mas = GameObject.Find("MasterObject");
+            mas.GetComponent<BaseScript>().setLance(lance.sprite, 3);
+            currentLance = lance.sprite;
+        }
+        if (index == 4)
+        {
+            lance.sprite = lance5;
+            GameObject mas = GameObject.Find("MasterObject");
+            mas.GetComponent<BaseScript>().setLance(lance.sprite, 4);
+            currentLance = lance.sprite;
+        }
+        if (index == 5)
+        {
+            lance.sprite = lance6;
+            GameObject mas = GameObject.Find("MasterObject");
+            mas.GetComponent<BaseScript>().setLance(lance.sprite, 5);
+            currentLance = lance.sprite;
+        }
     }
     public void changeSteed(int index)
     {

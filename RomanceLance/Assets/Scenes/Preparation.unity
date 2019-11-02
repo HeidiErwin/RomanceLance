@@ -429,7 +429,7 @@ GameObject:
   - component: {fileID: 80781088}
   - component: {fileID: 80781087}
   m_Layer: 5
-  m_Name: Yellow (1)
+  m_Name: Lance6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -448,7 +448,7 @@ RectTransform:
   m_Children:
   - {fileID: 435441578}
   m_Father: {fileID: 549043164}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -499,12 +499,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1502575982}
-        m_MethodName: changeShirt
+        m_MethodName: changeLance
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -613,7 +613,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Z
+  m_Text: Lance 4
 --- !u!222 &336202260
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1069,7 +1069,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Z
+  m_Text: Lance 6
 --- !u!222 &435441580
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1452,10 +1452,10 @@ RectTransform:
   - {fileID: 1416944495}
   - {fileID: 1007421525}
   - {fileID: 1363352770}
-  - {fileID: 80781086}
-  - {fileID: 728141690}
-  - {fileID: 1771811665}
   - {fileID: 1265632788}
+  - {fileID: 1771811665}
+  - {fileID: 728141690}
+  - {fileID: 80781086}
   m_Father: {fileID: 569252207}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1736,7 +1736,7 @@ GameObject:
   - component: {fileID: 728141692}
   - component: {fileID: 728141691}
   m_Layer: 5
-  m_Name: Purple (1)
+  m_Name: Lance5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1755,7 +1755,7 @@ RectTransform:
   m_Children:
   - {fileID: 1051616300}
   m_Father: {fileID: 549043164}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1806,12 +1806,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1502575982}
-        m_MethodName: changeShirt
+        m_MethodName: changeLance
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2222,7 +2222,7 @@ GameObject:
   - component: {fileID: 1007421527}
   - component: {fileID: 1007421526}
   m_Layer: 5
-  m_Name: B
+  m_Name: Lance1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2304,7 +2304,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1502575982}
-        m_MethodName: changeShirt
+        m_MethodName: changeLance
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2418,7 +2418,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Z
+  m_Text: Lance 5
 --- !u!222 &1051616302
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2895,7 +2895,7 @@ GameObject:
   - component: {fileID: 1265632790}
   - component: {fileID: 1265632789}
   m_Layer: 5
-  m_Name: Orange (1)
+  m_Name: Lance3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2914,7 +2914,7 @@ RectTransform:
   m_Children:
   - {fileID: 1875443685}
   m_Father: {fileID: 549043164}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2965,12 +2965,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1502575982}
-        m_MethodName: changeShirt
+        m_MethodName: changeLance
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3153,7 +3153,7 @@ GameObject:
   - component: {fileID: 1363352772}
   - component: {fileID: 1363352771}
   m_Layer: 5
-  m_Name: White
+  m_Name: Lance2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3197,7 +3197,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -3223,7 +3223,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1502575982}
-        m_MethodName: changeShirt
+        m_MethodName: changeLance
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3649,6 +3649,13 @@ MonoBehaviour:
   limescooter: {fileID: 21300000, guid: 7f2a17b4086df5244a8c69f67bb48416, type: 3}
   crocs: {fileID: 21300000, guid: 9a50070b1b20acb4f91492832e3b9049, type: 3}
   pattyMobile: {fileID: 21300000, guid: 433d72c3f65b780468d9a549f47178ba, type: 3}
+  lance: {fileID: 1732407622}
+  lance1: {fileID: 21300000, guid: 22a4b473e8b8a7b44bc97f5a1387126e, type: 3}
+  lance2: {fileID: 21300000, guid: 8c5e13e1c9fd8344293e0a23b8f4b1f4, type: 3}
+  lance3: {fileID: 21300000, guid: c90d3cb0e01362f44a4d3d6c742418cd, type: 3}
+  lance4: {fileID: 21300000, guid: 91027fd02eed51044ac6afbeeca33ba4, type: 3}
+  lance5: {fileID: 21300000, guid: 0754c0d862e2d484aa4742703829fb1b, type: 3}
+  lance6: {fileID: 21300000, guid: caf84162465a66d47b9df63436675968, type: 3}
   currentShirt: {fileID: 0}
   currentLance: {fileID: 0}
   currentSteed: {fileID: 0}
@@ -3701,12 +3708,13 @@ RectTransform:
   m_Children:
   - {fileID: 1687076915}
   - {fileID: 829123222}
+  - {fileID: 1732407621}
   m_Father: {fileID: 1919226709}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -261.2, y: -2}
+  m_AnchoredPosition: {x: -288, y: 3}
   m_SizeDelta: {x: 228, y: 421.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1552333905
@@ -3777,7 +3785,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Z
+  m_Text: Lance 2
 --- !u!222 &1552333908
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3856,9 +3864,82 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: 23}
+  m_AnchoredPosition: {x: 2, y: 18}
   m_SizeDelta: {x: 183.8, y: 183.8}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1732407620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1732407621}
+  - component: {fileID: 1732407623}
+  - component: {fileID: 1732407622}
+  m_Layer: 5
+  m_Name: Lance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1732407621
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732407620}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1502575985}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -127.5, y: 63.2}
+  m_SizeDelta: {x: 265.1, y: 419.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1732407622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732407620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 22a4b473e8b8a7b44bc97f5a1387126e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1732407623
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732407620}
+  m_CullTransparentMesh: 0
 --- !u!1 &1765503985
 GameObject:
   m_ObjectHideFlags: 0
@@ -3949,7 +4030,7 @@ GameObject:
   - component: {fileID: 1771811667}
   - component: {fileID: 1771811666}
   m_Layer: 5
-  m_Name: Red (1)
+  m_Name: Lance4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3968,7 +4049,7 @@ RectTransform:
   m_Children:
   - {fileID: 336202258}
   m_Father: {fileID: 549043164}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4019,12 +4100,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1502575982}
-        m_MethodName: changeShirt
+        m_MethodName: changeLance
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4482,7 +4563,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Crocs
+  m_Text: Lance 3
 --- !u!222 &1875443687
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5336,7 +5417,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: B
+  m_Text: Lance 1
 --- !u!222 &2127357598
 CanvasRenderer:
   m_ObjectHideFlags: 0
