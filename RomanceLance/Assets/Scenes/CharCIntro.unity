@@ -220,7 +220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txt: {fileID: 609843355}
   dialogue: {fileID: 1585500053}
-  nextScene: PrepRyan
+  nextScene: Preparation
   button1: {fileID: 837451729}
   button2: {fileID: 566868304}
   textInMotion: 0

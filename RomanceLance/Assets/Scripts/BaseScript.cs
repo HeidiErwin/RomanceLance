@@ -83,4 +83,10 @@ public class BaseScript : MonoBehaviour
     {
         currentLance = myLance;
     }
+    public void reset()
+    {
+        CharA.reset();
+        CharB.reset();
+        CharC.reset();
+    }
 }

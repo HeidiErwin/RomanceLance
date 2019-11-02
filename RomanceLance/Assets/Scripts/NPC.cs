@@ -26,6 +26,14 @@ public class NPC : MonoBehaviour
         favoriteSteedGuessed = false;
         favoriteLanceGuessed = false;
     }
+    public void reset()
+    {
+        favoriteShirtGuessed = false;
+        favoriteSteedGuessed = false;
+        favoriteLanceGuessed = false;
+        loveMeter = 0;
+        canDate = false;
+    }
     public string getName()
     {
         return charName;
