@@ -11,6 +11,7 @@ public class Joust : MonoBehaviour
     [SerializeField] GameObject npc;
     private int hearts;
     private int lance;
+    public string nextScene;
 
     private float runTime = 2.5f; // how long it takes the characters to run across the screen
 
@@ -21,8 +22,8 @@ public class Joust : MonoBehaviour
          int shirt = mas.GetComponent<BaseScript>().shirtNumber;
          int steed = mas.GetComponent<BaseScript>().steedNumber;
          lance = mas.GetComponent<BaseScript>().lanceNumber;
-         mas.GetComponent<BaseScript>().getNPC().checkChoices(shirt, steed, lance);
-         hearts = mas.GetComponent<BaseScript>().getNPC().getLoveMeter();
+         mas.GetComponent<BaseScript>().currentNPC.checkChoices(shirt, steed, lance);
+         hearts = mas.GetComponent<BaseScript>().currentNPC.getLoveMeter();
          StartJoust();
          player.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = BaseScript.currentShirt;
          player.transform.GetChild(1).gameObject.GetComponent<SpriteRenderer>().sprite = BaseScript.currentSteed;
@@ -86,8 +87,8 @@ public class Joust : MonoBehaviour
     {
         yield return new WaitForSeconds(runTime);
         GameObject mas = GameObject.Find("MasterObject");
-        mas.GetComponent<BaseScript>().incrementNPC();
-        mas.GetComponent<BaseScript>().NextLevel("Dialogue");
+        mas.GetComponent<BaseScript>().NextLevel(
+            mas.GetComponent<BaseScript>().currentNPC.getName() + "Dialog");
     }
 
     public void ShowIntenseEyes() {

@@ -17,4 +17,37 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Preparation.unity
     guid: bf53b3104f9ea914f9b3965b424232bb
+  - enabled: 1
+    path: Assets/Scenes/IntroGame.unity
+    guid: f514fddaa0f7b0d45aa69f4f1de91c2d
+  - enabled: 1
+    path: Assets/Scenes/PrepRyan.unity
+    guid: b3b3da552aa99b84ca7d2fc522a5bdb8
+  - enabled: 1
+    path: Assets/Scenes/CharAIntro.unity
+    guid: 0f2c214026a61614c80b0ef9e8f08794
+  - enabled: 1
+    path: Assets/Scenes/BaseScene.unity
+    guid: ec8ae5d5d84a7f84fafeffb3beb03617
+  - enabled: 1
+    path: Assets/Scenes/CharADialog.unity
+    guid: 32f66198ef776164bb315aa20715a303
+  - enabled: 1
+    path: Assets/Scenes/CharBIntro.unity
+    guid: 1061f7700cd11a14d861a4ba6004e2e8
+  - enabled: 1
+    path: Assets/Scenes/CharBDialog.unity
+    guid: 534a8f6756cda814181e99c3f617a12a
+  - enabled: 1
+    path: Assets/Scenes/CharCIntro.unity
+    guid: 7a1238854290e7d409e77cc3308f0c98
+  - enabled: 1
+    path: Assets/Scenes/CharCDialog.unity
+    guid: a8dda16f09bbdc844b4ccaaa82b7b448
+  - enabled: 1
+    path: Assets/Scenes/AskScene.unity
+    guid: cd5e5e1493dfb0349b7e370f17bef960
+  - enabled: 1
+    path: Assets/Scenes/AfterScene.unity
+    guid: 9de0a53458ec85b4da1fa85440de611b
   m_configObjects: {}

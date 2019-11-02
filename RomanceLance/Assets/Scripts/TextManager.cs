@@ -8,12 +8,12 @@ public class TextManager : MonoBehaviour
     public Text txt;
     //Make sure that this dialogue GameObject has a TextLibrary script attached.
     public GameObject dialogue;
+    public string nextScene;
     int textIndex = 0;
     string[] lines;
     public GameObject button1;
     public GameObject button2;
     public bool textInMotion = false; // is NPC still speaking (i.e. text is still moving as letters appear one by one)
-
 
     // Start is called before the first frame update
     void Start()
@@ -58,7 +58,7 @@ public class TextManager : MonoBehaviour
             else
             {
                 GameObject mas = GameObject.Find("MasterObject");
-                mas.GetComponent<BaseScript>().NextLevel("Preparation");
+                mas.GetComponent<BaseScript>().NextLevel(nextScene);
             }
         }
     }
@@ -90,7 +90,13 @@ public class TextManager : MonoBehaviour
 
     public void GoodOptionPicked() {
         GameObject mas = GameObject.Find("MasterObject");
-        mas.GetComponent<BaseScript>().getNPC().goodDialogue();
+        mas.GetComponent<BaseScript>().currentNPC.goodDialogue();
+        mas.GetComponent<BaseScript>().incrementNPC();
     }
 
+    public void BadOptionPicked()
+    {
+        GameObject mas = GameObject.Find("MasterObject");
+        mas.GetComponent<BaseScript>().incrementNPC();
+    }
 }

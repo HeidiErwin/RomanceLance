@@ -9,11 +9,14 @@ public class LevelManager : MonoBehaviour {
     }
 
     public void BackToMenu() {
-        SceneManager.LoadScene("Menu");
+        GameObject mas = GameObject.Find("MasterObject");
+        mas.GetComponent<BaseScript>().NextLevel("Menu");
     }
 
     public void StartGame() {
-        SceneManager.LoadScene("Dialogue");
+        GameObject mas = GameObject.Find("MasterObject");
+        mas.GetComponent<BaseScript>().NextLevel("IntroGame");
+        //SceneManager.LoadScene("IntroGame");
     }
 
     public void SwitchScene(string nextScene)
@@ -31,7 +34,8 @@ public class LevelManager : MonoBehaviour {
     }
 
     public void ShowCredits() {
-        SceneManager.LoadScene("Credits");
+        GameObject mas = GameObject.Find("MasterObject");
+        mas.GetComponent<BaseScript>().NextLevel("Credits");
     }
 
     public void ShowInstructions() {

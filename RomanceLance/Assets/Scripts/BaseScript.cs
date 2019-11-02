@@ -12,48 +12,55 @@ public class BaseScript : MonoBehaviour
     public int shirtNumber;
     public int steedNumber;
     public int lanceNumber;
-    public NPC della;
-    public NPC person2;
-    public NPC cyrille;
-    public int currentNPC;
+    public NPC CharA;
+    public NPC CharB;
+    public NPC CharC;
+    public int countNPC;
+    public NPC currentNPC;
 
     private void Start()
     {
-        currentNPC = 0;
+        countNPC = 0;
         shirtNumber = 0;
         steedNumber = 0;
         lanceNumber = 0;
-        della = new NPC("Della", 0, 0, 0);
-        person2 = new NPC("person2", 1, 1, 1);
-        cyrille = new NPC("Cyrille", 2, 2, 2);
+        //No name yet
+        CharA = new NPC("CharA", 0, 0, 0);
+        //Della
+        CharB = new NPC("CharB", 1, 1, 1);
+        //Cyrille
+        CharC = new NPC("CharC", 2, 2, 2);
         SceneManager.LoadScene("Menu", LoadSceneMode.Additive);
         currentLevel = "Menu";
+        currentNPC = CharA;
     }
-    public NPC getNPC()
+    public NPC setNPC()
     {
-        if(currentNPC == 0)
+        if(countNPC == 0)
         {
-            return della;
+            return CharA;
         }
-        if(currentNPC == 1)
+        if(countNPC == 1)
         {
-            return person2;
+            return CharB;
         }
-        if(currentNPC == 2)
+        if(countNPC == 2)
         {
-            return cyrille;
+            return CharC;
         }
-        return della;
+        else return CharA;
     }
     public void incrementNPC()
     {
-        if (currentNPC < 3)
+        if (countNPC < 3)
         {
-            currentNPC++;
+            countNPC++;
+            currentNPC = setNPC();
         }
         else
         {
-            currentNPC = 0;
+            countNPC = 0;
+            currentNPC = setNPC();
         }
     }
     public void NextLevel(string nextLevel)
