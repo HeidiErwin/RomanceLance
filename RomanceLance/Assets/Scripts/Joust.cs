@@ -62,7 +62,7 @@ public class Joust : MonoBehaviour
 
     public void ShowIntenseEyes() {
         intenseEyes.gameObject.SetActive(true);
-        for(int i = 0; i<3; i++)
+        for(int i = 0; i<4; i++)
         {
             intenseEyes.transform.GetChild(0).transform.GetChild(i).gameObject.SetActive(false);
         }
