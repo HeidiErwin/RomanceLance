@@ -29,7 +29,8 @@ public class Player : MonoBehaviour
     public Sprite currentShirt;
     public Sprite currentLance;
     public Sprite currentSteed;
-
+   
+    
     public void changeShirt(int index)
     {
         if (index == 0)
@@ -38,6 +39,7 @@ public class Player : MonoBehaviour
             GameObject mas = GameObject.Find("MasterObject");
             mas.GetComponent<BaseScript>().setShirt(shirt.sprite, 0);
             currentShirt = shirt.sprite;
+
         }
         if (index == 1)
         {
@@ -45,6 +47,7 @@ public class Player : MonoBehaviour
             GameObject mas = GameObject.Find("MasterObject");
             mas.GetComponent<BaseScript>().setShirt(shirt.sprite, 1);
             currentShirt = shirt.sprite;
+
         }
         if (index == 2)
         {
