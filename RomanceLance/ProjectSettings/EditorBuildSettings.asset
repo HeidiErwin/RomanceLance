@@ -18,6 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Preparation.unity
     guid: bf53b3104f9ea914f9b3965b424232bb
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/IntroGame.unity
     guid: f514fddaa0f7b0d45aa69f4f1de91c2d
   - enabled: 1
@@ -50,4 +51,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AfterScene.unity
     guid: 9de0a53458ec85b4da1fa85440de611b
+=======
+    path: Assets/Scenes/Credits.unity
+    guid: e7f626ab16151d74abb79bef4457e25f
+>>>>>>> 9f6ddad6d0ccd17288240506427df040899595df
   m_configObjects: {}
