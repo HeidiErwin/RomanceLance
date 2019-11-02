@@ -10,6 +10,7 @@ public class Joust : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] GameObject npc;
     private int hearts;
+    private int lance;
 
     private float runTime = 2.5f; // how long it takes the characters to run across the screen
 
@@ -19,7 +20,7 @@ public class Joust : MonoBehaviour
          GameObject mas = GameObject.Find("MasterObject");
          int shirt = mas.GetComponent<BaseScript>().shirtNumber;
          int steed = mas.GetComponent<BaseScript>().steedNumber;
-         int lance = mas.GetComponent<BaseScript>().lanceNumber;
+         lance = mas.GetComponent<BaseScript>().lanceNumber;
          mas.GetComponent<BaseScript>().getNPC().checkChoices(shirt, steed, lance);
          hearts = mas.GetComponent<BaseScript>().getNPC().getLoveMeter();
          StartJoust();
@@ -39,8 +40,16 @@ public class Joust : MonoBehaviour
     }
 
     public void RunSecondHalf() {
-        StartCoroutine(MoveToPosition(npc.transform, new Vector3(-8, .5f, 0), runTime));
-        StartCoroutine(MoveToPosition(player.transform, new Vector3(8, -.5f, 0), runTime));
+        if (WhoFalls().Equals("player"))
+        {
+            StartCoroutine(MoveToPosition(npc.transform, new Vector3(-8, .5f, 0), runTime));
+            StartCoroutine(Falls(player.transform, runTime, -1));
+        }
+        else
+        {
+            StartCoroutine(MoveToPosition(player.transform, new Vector3(8, -.5f, 0), runTime));
+            StartCoroutine(Falls(npc.transform, runTime, 1));
+        }
         StartCoroutine(WaitThenChangeScene());
     }
 
@@ -50,6 +59,27 @@ public class Joust : MonoBehaviour
         yield return new WaitForSeconds(1f);
         HideIntenseEyes();
         RunSecondHalf();
+    }
+
+    public string WhoFalls()
+    {
+        if(lance == 1 || lance == 2 || lance == 3)
+        {
+            return "player";
+        }
+        return "npc";
+    }
+
+    IEnumerator Falls(Transform transform, float timeToMove, int direction)
+    {
+        Quaternion currentRot = transform.rotation;
+        float t = 0f;
+        while (t < 0.6)
+        {
+            t += Time.deltaTime / timeToMove;
+            transform.Rotate(direction * Vector3.back);
+            yield return null;
+        }
     }
 
     IEnumerator WaitThenChangeScene()
