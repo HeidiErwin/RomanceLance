@@ -60,7 +60,7 @@ public class TextManager : MonoBehaviour
                 GameObject mas = GameObject.Find("MasterObject");
                 if (nextScene.Equals("Menu"))
                 {
-                    mas.GetComponent<BaseScript>().Reset();
+                    mas.GetComponent<BaseScript>().reset();
                 }
                 mas.GetComponent<BaseScript>().NextLevel(nextScene);
             }
