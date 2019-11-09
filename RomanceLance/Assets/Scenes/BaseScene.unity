@@ -152,9 +152,17 @@ MonoBehaviour:
   shirtNumber: 0
   steedNumber: 0
   lanceNumber: 0
-  della: {fileID: 0}
-  person2: {fileID: 0}
-  cyrille: {fileID: 0}
+  CharA: {fileID: 0}
+  CharB: {fileID: 0}
+  CharC: {fileID: 0}
+  countNPC: 0
+  currentNPC: {fileID: 0}
+  charAsprite: {fileID: 21300000, guid: f4b9eb0d0f2415c49bf831e5296be31e, type: 3}
+  charAjoust: {fileID: 21300000, guid: ae0f3cd3bd3fdb24a8356e088f320f3b, type: 3}
+  charBsprite: {fileID: 21300000, guid: a6d18e4b95621774fa49b2ddfb0f5e26, type: 3}
+  charBjoust: {fileID: 21300000, guid: 83cd3f35da8304349b0c695910199436, type: 3}
+  charCsprite: {fileID: 21300000, guid: 08f93c6728ceeca4d981125df2388e95, type: 3}
+  charCjoust: {fileID: 21300000, guid: c9bf2e7df6ce8364a828e77ee16211df, type: 3}
 --- !u!4 &194460875
 Transform:
   m_ObjectHideFlags: 0

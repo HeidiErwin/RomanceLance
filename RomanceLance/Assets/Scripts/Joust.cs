@@ -18,15 +18,17 @@ public class Joust : MonoBehaviour
     public bool charactersMoving = false;
 
     private void Start() {
-         GameObject mas = GameObject.Find("MasterObject");
-         int shirt = mas.GetComponent<BaseScript>().shirtNumber;
-         int steed = mas.GetComponent<BaseScript>().steedNumber;
-         lance = mas.GetComponent<BaseScript>().lanceNumber;
-         mas.GetComponent<BaseScript>().currentNPC.checkChoices(shirt, steed, lance);
-         hearts = mas.GetComponent<BaseScript>().currentNPC.getLoveMeter();
-         StartJoust();
-         player.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = BaseScript.currentShirt;
-         player.transform.GetChild(1).gameObject.GetComponent<SpriteRenderer>().sprite = BaseScript.currentSteed;
+        GameObject mas = GameObject.Find("MasterObject");
+        int shirt = mas.GetComponent<BaseScript>().shirtNumber;
+        int steed = mas.GetComponent<BaseScript>().steedNumber;
+        lance = mas.GetComponent<BaseScript>().lanceNumber;
+        npc.GetComponent<SpriteRenderer>().sprite =
+          mas.GetComponent<BaseScript>().currentNPC.getJSprite();
+        mas.GetComponent<BaseScript>().currentNPC.checkChoices(shirt, steed, lance);
+        hearts = mas.GetComponent<BaseScript>().currentNPC.getLoveMeter();
+        StartJoust();
+        player.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = BaseScript.currentShirt;
+        player.transform.GetChild(1).gameObject.GetComponent<SpriteRenderer>().sprite = BaseScript.currentSteed;
     }
 
     public void StartJoust() {

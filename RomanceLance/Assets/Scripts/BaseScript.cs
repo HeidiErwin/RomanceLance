@@ -17,6 +17,12 @@ public class BaseScript : MonoBehaviour
     public NPC CharC;
     public int countNPC;
     public NPC currentNPC;
+    public Sprite charAsprite;
+    public Sprite charAjoust;
+    public Sprite charBsprite;
+    public Sprite charBjoust;
+    public Sprite charCsprite;
+    public Sprite charCjoust;
 
     private void Start()
     {
@@ -25,11 +31,11 @@ public class BaseScript : MonoBehaviour
         steedNumber = 0;
         lanceNumber = 0;
         //No name yet
-        CharA = new NPC("CharA", 0, 0, 0);
+        CharA = new NPC("CharA", 0, 0, 0, charAsprite, charAjoust);
         //Della
-        CharB = new NPC("CharB", 1, 1, 1);
+        CharB = new NPC("CharB", 1, 1, 1, charBsprite, charBjoust);
         //Cyrille
-        CharC = new NPC("CharC", 2, 2, 2);
+        CharC = new NPC("CharC", 2, 2, 2, charCsprite, charCjoust);
         SceneManager.LoadScene("Menu", LoadSceneMode.Additive);
         currentLevel = "Menu";
         currentNPC = CharA;

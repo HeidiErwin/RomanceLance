@@ -13,8 +13,11 @@ public class NPC : MonoBehaviour
     private bool favoriteLanceGuessed;
     private string charName;
     private bool canDate;
+    private Sprite sprite;
+    private Sprite joustsprite;
 
-    public NPC(string theName, int favShirt, int favSteed, int favLance)
+    public NPC(string theName, int favShirt, int favSteed, int favLance, Sprite appear,
+        Sprite joustappear)
     {
         canDate = false;
         loveMeter = 0;
@@ -25,6 +28,8 @@ public class NPC : MonoBehaviour
         favoriteShirtGuessed = false;
         favoriteSteedGuessed = false;
         favoriteLanceGuessed = false;
+        sprite = appear;
+        joustsprite = joustappear;
     }
     public void reset()
     {
@@ -37,6 +42,14 @@ public class NPC : MonoBehaviour
     public string getName()
     {
         return charName;
+    }
+    public Sprite getSprite()
+    {
+        return sprite;
+    }
+    public Sprite getJSprite()
+    {
+        return joustsprite;
     }
     public void shirtGuessed()
     {
