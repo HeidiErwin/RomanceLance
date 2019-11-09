@@ -1389,7 +1389,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textLines:
-  - I am Character C, the most powerful being in the universe!
+  - It is time to test thy mettle, newcomer! Micaela!
+  - "Thou shalt test the extent of Lance\u2019s prowess!"
+  - Don thy armor, arm thyself, and prepare thy steed.
 --- !u!4 &1585500055
 Transform:
   m_ObjectHideFlags: 0

@@ -371,7 +371,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: No!
+  m_Text: I prefer canine companions.
 --- !u!222 &194234512
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -642,7 +642,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Yes!
+  m_Text: "I\u2019m a feline fan."
 --- !u!222 &856644915
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -804,7 +804,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textLines:
-  - Oh no! I've been defeated!
+  - dialogue
+  - "So, um\u2026 I hope this isn\u2019t weird to ask, but\u2026 are you a cat person,
+    or a dog person?"
   - --break
 --- !u!4 &1368897233
 Transform:
@@ -1004,8 +1006,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30, y: -294}
-  m_SizeDelta: {x: 769.7, y: 1399.9}
+  m_AnchoredPosition: {x: 95.4, y: -193}
+  m_SizeDelta: {x: 638.9, y: 1399.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1497786449
 MonoBehaviour:
@@ -1025,7 +1027,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 08f93c6728ceeca4d981125df2388e95, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5d3c57cc32550114aab7034732d9f0d6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1073,9 +1075,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textLines:
-  - You monster!
-  - Bad choice!
-  - Failure!
+  - "Aren\u2019t they great?"
+  - "They\u2019re cute, and loyal, and never judge you for anything!"
+  - Perfect for cuddling during a thunderstorm.
 --- !u!4 &1548048046
 Transform:
   m_ObjectHideFlags: 0
@@ -1333,9 +1335,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textLines:
-  - Me too :)
-  - Good choice!
-  - You win
+  - "I see\u2026 I\u2019m allergic to cats, so I don\u2019t really like to be around
+    them\u2026"
 --- !u!4 &2066646331
 Transform:
   m_ObjectHideFlags: 0

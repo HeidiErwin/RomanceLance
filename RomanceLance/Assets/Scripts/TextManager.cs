@@ -26,7 +26,50 @@ public class TextManager : MonoBehaviour
         //Avoids catastrophic failure if the array is empty.
         if (lines.Length != 0)
         {
-            DisplayText(lines[textIndex]);
+            GameObject mas = GameObject.Find("MasterObject");
+            if (mas.GetComponent<BaseScript>().setNPC().hasLost() && lines[0].Equals("dialogue"))
+            {
+                if (mas.GetComponent<BaseScript>().countNPC == 0)
+                {
+                    lines[0] = "You’re, uh… pretty good…";
+                }
+                else if (mas.GetComponent<BaseScript>().countNPC == 1)
+                {
+                    lines[0] = "Rats! I thought I had you for sure! Oh well, good match!";
+                }
+                else
+                {
+                    lines[0] = "...I underestimated thee. I thought myself experienced, but it seems I’ve much to learn.";
+                }
+            }
+            else if (!mas.GetComponent<BaseScript>().setNPC().hasLost() && lines[0].Equals("dialogue"))
+            {
+                if (mas.GetComponent<BaseScript>().countNPC == 0)
+                {
+                    lines[0] = "I… I can’t believe it! I really won!";
+                }
+                else if (mas.GetComponent<BaseScript>().countNPC == 1)
+                {
+                    lines[0] = "Hehehe! Nice try, but you can’t bring me down that easily!";
+                }
+                else
+                {
+                    lines[0] = "A predictable result.";
+                    lines[1] = " Thou needest no less than ten further years of training before I am within thy reach.";
+                    lines[2] = "To be or not to be: that is the question…";
+                    lines[3] = "--break";
+                }
+            } else if (lines[0].Equals("final") && mas.GetComponent<BaseScript>().setNPC().getLoveMeter() >= 3)
+            {
+                lines[0] = "I love you!";
+                lines[1] = "It was meant to be!";
+                lines[2] = "--menu";
+            } else if (lines[0].Equals("final") && mas.GetComponent<BaseScript>().setNPC().getLoveMeter() < 3)
+            {
+                lines[0] = "I don't like you in that way...";
+                lines[1] = "--menu";
+            }
+            DisplayText(lines[0]);
         }
     }
 
@@ -49,6 +92,11 @@ public class TextManager : MonoBehaviour
                 {
                     button1.SetActive(true);
                     button2.SetActive(true);
+                } else if(lines[textIndex] == "--menu")
+                {
+                    GameObject mas = GameObject.Find("MasterObject");
+                    mas.GetComponent<BaseScript>().reset();
+                    mas.GetComponent<BaseScript>().NextLevel(nextScene);
                 }
                 else
                 {
@@ -58,10 +106,6 @@ public class TextManager : MonoBehaviour
             else
             {
                 GameObject mas = GameObject.Find("MasterObject");
-                if (nextScene.Equals("Menu"))
-                {
-                    mas.GetComponent<BaseScript>().reset();
-                }
                 mas.GetComponent<BaseScript>().NextLevel(nextScene);
             }
         }

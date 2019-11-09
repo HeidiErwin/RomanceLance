@@ -29,6 +29,7 @@ public class Joust : MonoBehaviour
         StartJoust();
         player.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = BaseScript.currentShirt;
         player.transform.GetChild(1).gameObject.GetComponent<SpriteRenderer>().sprite = BaseScript.currentSteed;
+        player.transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().sprite = BaseScript.currentLance;
     }
 
     public void StartJoust() {
@@ -59,7 +60,7 @@ public class Joust : MonoBehaviour
     IEnumerator WaitThenRunSecondHalf() {
         yield return new WaitForSeconds(2.5f);
         ShowIntenseEyes();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
         HideIntenseEyes();
         RunSecondHalf();
     }
@@ -70,6 +71,8 @@ public class Joust : MonoBehaviour
         {
             return "player";
         }
+        GameObject mas = GameObject.Find("MasterObject");
+        mas.GetComponent<BaseScript>().setNPC().defeat();
         return "npc";
     }
 
@@ -95,7 +98,7 @@ public class Joust : MonoBehaviour
 
     public void ShowIntenseEyes() {
         intenseEyes.gameObject.SetActive(true);
-        for(int i = 0; i<4; i++)
+        for(int i = 0; i<3; i++)
         {
             intenseEyes.transform.GetChild(0).transform.GetChild(i).gameObject.SetActive(false);
         }

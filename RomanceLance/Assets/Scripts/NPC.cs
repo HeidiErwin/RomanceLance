@@ -15,10 +15,12 @@ public class NPC : MonoBehaviour
     private bool canDate;
     private Sprite sprite;
     private Sprite joustsprite;
+    private bool isDefeated;
 
     public NPC(string theName, int favShirt, int favSteed, int favLance, Sprite appear,
         Sprite joustappear)
     {
+        isDefeated = false;
         canDate = false;
         loveMeter = 0;
         this.charName = theName;
@@ -77,7 +79,15 @@ public class NPC : MonoBehaviour
     }
     public void goodDialogue()
     {
-        loveMeter += 1;
+        //loveMeter += 1;
+    }
+    public bool hasLost()
+    {
+        return isDefeated;
+    }
+    public void defeat()
+    {
+        isDefeated = true;
     }
     public int getLoveMeter()
     {

@@ -154,8 +154,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30, y: -294}
-  m_SizeDelta: {x: 769.7, y: 1399.9}
+  m_AnchoredPosition: {x: 90, y: -189}
+  m_SizeDelta: {x: 649.8, y: 1399.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &122368570
 MonoBehaviour:
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 08f93c6728ceeca4d981125df2388e95, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5d3c57cc32550114aab7034732d9f0d6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -837,7 +837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -917,8 +917,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -430}
-  m_SizeDelta: {x: 1280, y: 242}
+  m_AnchoredPosition: {x: -24.1, y: -427.6}
+  m_SizeDelta: {x: 1793.8, y: 424.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1383343077
 MonoBehaviour:
@@ -938,7 +938,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c59cbc797b7880f4a982e7ec4b33b2d1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 29f5e8c369cde6246a9af31e9abc61c3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1316,7 +1316,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textLines:
-  - MC, do you like horses?
+  - "Hi\u2026 I\u2019m Micaela. Thanks for catching me..."
+  - "Hey, um\u2026 If you\u2019d like, uh\u2026 we need people, so\u2026"
+  - "Would, ah\u2026 would you like to check out the jousting club?"
 --- !u!4 &2032248680
 Transform:
   m_ObjectHideFlags: 0

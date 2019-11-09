@@ -88,11 +88,17 @@ public class BaseScript : MonoBehaviour
     public void setLance(Sprite myLance, int numLance)
     {
         currentLance = myLance;
+        lanceNumber = numLance;
     }
     public void reset()
     {
         CharA.reset();
         CharB.reset();
         CharC.reset();
+        countNPC = 0;
+        shirtNumber = 0;
+        steedNumber = 0;
+        lanceNumber = 0;
+        currentNPC = CharA;
     }
 }
