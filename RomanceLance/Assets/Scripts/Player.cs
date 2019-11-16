@@ -29,6 +29,8 @@ public class Player : MonoBehaviour
     public Sprite currentShirt;
     public Sprite currentLance;
     public Sprite currentSteed;
+    private AudioSource source;
+    [SerializeField] public AudioClip bouquetClickSound;
    
     
     public void changeShirt(int index)
