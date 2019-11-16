@@ -266,8 +266,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textLines:
-  - Blah blah blah, plot plot plot, foreshadowing, exposition
-  - More things will go here when they matter.
+  - You're a college student in the jousting club (because those exist) searching
+    for love.
+  - When you joust, what you wear will affect what they think of you. Try to attract
+    someone!
 --- !u!4 &999999490
 Transform:
   m_ObjectHideFlags: 0
