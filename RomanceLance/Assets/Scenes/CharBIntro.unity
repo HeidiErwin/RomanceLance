@@ -765,6 +765,15 @@ MonoBehaviour:
   - Welcome to the meat grinder!
   - Lance, huh? So you were BORN for jousting!
   - Consider this is your new home!
+  - question1
+  - --break
+  - response1
+  - question2
+  - --break
+  - response2
+  - question3
+  - --break
+  - response3
 --- !u!4 &1149509301
 Transform:
   m_ObjectHideFlags: 0
