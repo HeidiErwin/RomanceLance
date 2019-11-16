@@ -37,8 +37,8 @@ public class Joust : MonoBehaviour
     }
 
     IEnumerator RunFirstHalf() {
-        StartCoroutine(MoveToPosition(npc.transform, new Vector3(0, .5f, 0), runTime));
-        StartCoroutine(MoveToPosition(player.transform, new Vector3(0, -.5f, 0), runTime));
+        StartCoroutine(MoveToPosition(npc.transform, new Vector3(0, -3, 0), runTime));
+        StartCoroutine(MoveToPosition(player.transform, new Vector3(0, -2, 0), runTime));
         StartCoroutine(WaitThenRunSecondHalf());
         yield return null;
     }
@@ -46,12 +46,12 @@ public class Joust : MonoBehaviour
     public void RunSecondHalf() {
         if (WhoFalls().Equals("player"))
         {
-            StartCoroutine(MoveToPosition(npc.transform, new Vector3(-8, .5f, 0), runTime));
+            StartCoroutine(MoveToPosition(npc.transform, new Vector3(-8, -3, 0), runTime));
             StartCoroutine(Falls(player.transform, runTime, -1));
         }
         else
         {
-            StartCoroutine(MoveToPosition(player.transform, new Vector3(8, -.5f, 0), runTime));
+            StartCoroutine(MoveToPosition(player.transform, new Vector3(8, -2, 0), runTime));
             StartCoroutine(Falls(npc.transform, runTime, 1));
         }
         StartCoroutine(WaitThenChangeScene());

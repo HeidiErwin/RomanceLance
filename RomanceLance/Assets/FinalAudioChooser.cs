@@ -24,28 +24,29 @@ public class FinalAudioChooser : MonoBehaviour
         AudioClip StartClip = audio.clip;
         if (mas.GetComponent<BaseScript>().countNPC == 0 && mas.GetComponent<BaseScript>().currentNPC.getLoveMeter() >= 3)
         {
-            StartClip = charAAcc;
+            audio.clip = charAAcc;
         }
         else if (mas.GetComponent<BaseScript>().countNPC == 0 && mas.GetComponent<BaseScript>().currentNPC.getLoveMeter() < 3)
         {
-            StartClip = charARej;
+            audio.clip = charARej;
         }
         else if (mas.GetComponent<BaseScript>().countNPC == 1 && mas.GetComponent<BaseScript>().currentNPC.getLoveMeter() >= 3)
         {
-            StartClip = charBAcc;
+            audio.clip = charBAcc;
         }
         else if (mas.GetComponent<BaseScript>().countNPC == 1 && mas.GetComponent<BaseScript>().currentNPC.getLoveMeter() < 3)
         {
-            StartClip = charBRej;
+            audio.clip = charBRej;
         }
         else if (mas.GetComponent<BaseScript>().countNPC == 2 && mas.GetComponent<BaseScript>().currentNPC.getLoveMeter() >= 3)
         {
-            StartClip = charCAcc;
+            audio.clip = charCAcc;
         }
         else if (mas.GetComponent<BaseScript>().countNPC == 2 && mas.GetComponent<BaseScript>().currentNPC.getLoveMeter() < 3)
         {
-            StartClip = charCRej;
+            audio.clip = charCRej;
         }
         yield return new WaitForSeconds(0);
+        audio.Play();
     }
 }
