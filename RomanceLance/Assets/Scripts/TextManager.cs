@@ -24,7 +24,7 @@ public class TextManager : MonoBehaviour
         TextLibrary lib = dialogue.GetComponent<TextLibrary>();
         //"lines" now refers to the textLines array from "dialogue".
         lines = lib.textLines;
-        
+
         //Avoids catastrophic failure if the array is empty.
         if (lines.Length != 0)
         {
@@ -111,17 +111,20 @@ public class TextManager : MonoBehaviour
             }
             DisplayText(lines[0]);
         }
+    
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            textIndex++;
+        if (Input.GetKeyDown(KeyCode.Return)) 
+         {
             if (button1.activeSelf)
             {
-                
-            }
+                Responses(true);
+            } 
+            else
+                textIndex++;
+
             //Conditional to prevent accessing an invalid index.
             if (!(textIndex >= lines.Length))
             {
@@ -155,7 +158,7 @@ public class TextManager : MonoBehaviour
                 GameObject mas = GameObject.Find("MasterObject");
                 mas.GetComponent<BaseScript>().JoustDialogueEnd();
             }
-        }
+        } 
     }
 
     //This is called when player chooses an option
