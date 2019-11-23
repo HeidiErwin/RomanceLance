@@ -265,7 +265,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Purple
+  m_Text: Shookspeare
 --- !u!222 &45241343
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 66480142}
   - component: {fileID: 66480145}
   m_Layer: 5
-  m_Name: Black
+  m_Name: Dog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -690,7 +690,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Orange
+  m_Text: Purple
 --- !u!222 &381780650
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1115,7 +1115,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Red
+  m_Text: Waifu
 --- !u!222 &416313381
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2290,7 +2290,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Yellow
+  m_Text: Squidward
 --- !u!222 &838935570
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2312,7 +2312,7 @@ GameObject:
   - component: {fileID: 947548169}
   - component: {fileID: 947548168}
   m_Layer: 5
-  m_Name: Purple
+  m_Name: Sookspeare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2387,7 +2387,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2715,7 +2715,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: White
+  m_Text: Hotdog
 --- !u!222 &1117287920
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2857,7 +2857,7 @@ GameObject:
   - component: {fileID: 1247989724}
   - component: {fileID: 1247989723}
   m_Layer: 5
-  m_Name: Red
+  m_Name: Waifu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2932,7 +2932,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3892,12 +3892,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shirt: {fileID: 1687076913}
-  blackShirt: {fileID: 21300000, guid: 314b004ac6ae30049b900c8e97079492, type: 3}
-  whiteShirt: {fileID: 21300000, guid: 61aec2dd49e7b15469605357e6b57c3c, type: 3}
-  redShirt: {fileID: 21300000, guid: 8da00b6d186af454dbfa438008e7d0bf, type: 3}
-  orangeShirt: {fileID: 21300000, guid: 450ae77cc09918640b79c2740f1d903d, type: 3}
-  yellowShirt: {fileID: 21300000, guid: de4099e5541bf4c41bbcf09c21f20185, type: 3}
-  purpleShirt: {fileID: 21300000, guid: 2fde6c0e6f614d9448b804091e0e6811, type: 3}
+  dogShirt: {fileID: 21300000, guid: 85fb6f2c00a909a4a828a2eca89b8456, type: 3}
+  hotDogShirt: {fileID: 21300000, guid: 3ad0aecc8bbe52144939e0048519499e, type: 3}
+  purpleShirt: {fileID: 21300000, guid: 2f04bdbb9a14c404fb2bbfbe0f386060, type: 3}
+  waifuShirt: {fileID: 21300000, guid: 43ae58f574156e143980d595eee17ee7, type: 3}
+  shakespearShirt: {fileID: 21300000, guid: 148323f183648ca41b7c0946ce737b2b, type: 3}
+  squidwardShirt: {fileID: 21300000, guid: 2f04bdbb9a14c404fb2bbfbe0f386060, type: 3}
   steed: {fileID: 829123223}
   horse: {fileID: 21300000, guid: 5836ae73439e2f9489cac7371827ef27, type: 3}
   razor: {fileID: 21300000, guid: 3c60e09e100b9dd4ba9eea5ed6218358, type: 3}
@@ -4087,7 +4087,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 314b004ac6ae30049b900c8e97079492, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 85fb6f2c00a909a4a828a2eca89b8456, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4121,8 +4121,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: 18}
-  m_SizeDelta: {x: 183.8, y: 183.8}
+  m_AnchoredPosition: {x: 3.9, y: 29.8}
+  m_SizeDelta: {x: 203.9, y: 193.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1732407620
 GameObject:
@@ -4266,7 +4266,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Black
+  m_Text: Dog
 --- !u!222 &1765503988
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4417,7 +4417,7 @@ GameObject:
   - component: {fileID: 1792060695}
   - component: {fileID: 1792060694}
   m_Layer: 5
-  m_Name: Yellow
+  m_Name: Squidward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4492,7 +4492,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5047,7 +5047,7 @@ GameObject:
   - component: {fileID: 1885670208}
   - component: {fileID: 1885670207}
   m_Layer: 5
-  m_Name: Orange
+  m_Name: Purple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5122,7 +5122,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5631,7 +5631,7 @@ GameObject:
   - component: {fileID: 2120213118}
   - component: {fileID: 2120213117}
   m_Layer: 5
-  m_Name: White
+  m_Name: Hotdog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

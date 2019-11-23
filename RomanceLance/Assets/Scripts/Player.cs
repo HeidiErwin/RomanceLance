@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     [SerializeField] Image shirt;
-    [SerializeField] Sprite blackShirt;
-    [SerializeField] Sprite whiteShirt;
-    [SerializeField] Sprite redShirt;
-    [SerializeField] Sprite orangeShirt;
-    [SerializeField] Sprite yellowShirt;
+    [SerializeField] Sprite dogShirt;
+    [SerializeField] Sprite hotDogShirt;
     [SerializeField] Sprite purpleShirt;
+    [SerializeField] Sprite waifuShirt;
+    [SerializeField] Sprite shakespearShirt;
+    [SerializeField] Sprite squidwardShirt;
     [SerializeField] Image steed;
     [SerializeField] Sprite horse;
     [SerializeField] Sprite razor;
@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
     {
         if (index == 0)
         {
-            shirt.sprite = blackShirt;
+            shirt.sprite = dogShirt;
             GameObject mas = GameObject.Find("MasterObject");
             mas.GetComponent<BaseScript>().setShirt(shirt.sprite, 0);
             currentShirt = shirt.sprite;
@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
         }
         if (index == 1)
         {
-            shirt.sprite = whiteShirt;
+            shirt.sprite = hotDogShirt;
             GameObject mas = GameObject.Find("MasterObject");
             mas.GetComponent<BaseScript>().setShirt(shirt.sprite, 1);
             currentShirt = shirt.sprite;
@@ -53,28 +53,28 @@ public class Player : MonoBehaviour
         }
         if (index == 2)
         {
-            shirt.sprite = redShirt;
+            shirt.sprite = purpleShirt;
             GameObject mas = GameObject.Find("MasterObject");
             mas.GetComponent<BaseScript>().setShirt(shirt.sprite, 2);
             currentShirt = shirt.sprite;
         }
         if (index == 3)
         {
-            shirt.sprite = orangeShirt;
+            shirt.sprite = waifuShirt;
             GameObject mas = GameObject.Find("MasterObject");
             mas.GetComponent<BaseScript>().setShirt(shirt.sprite, 3);
             currentShirt = shirt.sprite;
         }
         if (index == 4)
         {
-            shirt.sprite = yellowShirt;
+            shirt.sprite = shakespearShirt;
             GameObject mas = GameObject.Find("MasterObject");
             mas.GetComponent<BaseScript>().setShirt(shirt.sprite, 4);
             currentShirt = shirt.sprite;
         }
         if (index == 5)
         {
-            shirt.sprite = purpleShirt;
+            shirt.sprite = squidwardShirt;
             GameObject mas = GameObject.Find("MasterObject");
             mas.GetComponent<BaseScript>().setShirt(shirt.sprite, 5);
             currentShirt = shirt.sprite;
