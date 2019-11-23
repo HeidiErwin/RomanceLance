@@ -91,23 +91,14 @@ public class TextManager : MonoBehaviour
             else if (mas.GetComponent<BaseScript>().countNPC == 0 && lines[0].Equals("--joust"))
             {
                 lines[0] = "NPC0 joust";
-                lines[1] = "NPC0 joust 2";
-                lines[2] = "--endjoust";
-                mas.GetComponent<BaseScript>().JoustDialogueStart();
             }
             else if (mas.GetComponent<BaseScript>().countNPC == 1 && lines[0].Equals("--joust"))
             {
                 lines[0] = "NPC1 joust";
-                lines[1] = "NPC1 joust 2";
-                lines[2] = "--endjoust";
-                mas.GetComponent<BaseScript>().JoustDialogueStart();
             }
             else if (mas.GetComponent<BaseScript>().countNPC == 2 && lines[0].Equals("--joust"))
             {
                 lines[0] = "NPC2 joust";
-                lines[1] = "NPC2 joust 2";
-                lines[2] = "--endjoust";
-                mas.GetComponent<BaseScript>().JoustDialogueStart();
             }
             DisplayText(lines[0]);
         }
@@ -116,7 +107,7 @@ public class TextManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return)) 
+        if (Input.GetKeyDown(KeyCode.Return) && lines.Length != 1) 
          {
             if (button1.activeSelf)
             {
@@ -148,15 +139,10 @@ public class TextManager : MonoBehaviour
                     DisplayText(lines[textIndex]);
                 }
             }
-            else if (lines[textIndex - 1] != "The game needs to end!" || lines[textIndex - 1] != "--endjoust")
+            else if(lines[textIndex-1] != "The game needs to end!")
             {
                 GameObject mas = GameObject.Find("MasterObject");
                 mas.GetComponent<BaseScript>().NextLevel(nextScene);
-            }
-            else if (lines[textIndex - 1] == "--endjoust")
-            {
-                GameObject mas = GameObject.Find("MasterObject");
-                mas.GetComponent<BaseScript>().JoustDialogueEnd();
             }
         } 
     }

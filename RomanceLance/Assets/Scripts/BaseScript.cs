@@ -26,11 +26,9 @@ public class BaseScript : MonoBehaviour
     public Sprite charBjoust;
     public Sprite charCsprite;
     public Sprite charCjoust;
-    public bool joustDialogue;
 
     private void Start()
     {
-        joustDialogue = false;
         countNPC = 0;
         shirtNumber = 0;
         steedNumber = 0;
@@ -108,13 +106,5 @@ public class BaseScript : MonoBehaviour
         steedNumber = 0;
         lanceNumber = 0;
         currentNPC = CharA;
-    }
-    public void JoustDialogueEnd()
-    {
-        joustDialogue = false;
-    }
-    public void JoustDialogueStart()
-    {
-        joustDialogue = true;
     }
 }

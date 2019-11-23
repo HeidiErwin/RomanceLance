@@ -59,7 +59,8 @@ public class Joust : MonoBehaviour
     IEnumerator WaitThenRunSecondHalf() {
         yield return new WaitForSeconds(2.5f);
         ShowIntenseEyes();
-        yield return new WaitForSeconds(3f);
+        GameObject mas = GameObject.Find("MasterObject");
+        yield return new WaitForSeconds(5f);
         HideIntenseEyes();
         RunSecondHalf();
     }
