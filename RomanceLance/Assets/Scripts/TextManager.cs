@@ -77,7 +77,6 @@ public class TextManager : MonoBehaviour
             {
                 Questions(0);
                 PlayerAnswers(0);
-
             }
             else if (mas.GetComponent<BaseScript>().countNPC == 1 && lines[0].Equals("Oooh! Fresh blood!"))
             {
@@ -88,6 +87,27 @@ public class TextManager : MonoBehaviour
             {
                 Questions(2);
                 PlayerAnswers(2);
+            }
+            else if (mas.GetComponent<BaseScript>().countNPC == 0 && lines[0].Equals("--joust"))
+            {
+                lines[0] = "NPC0 joust";
+                lines[1] = "NPC0 joust 2";
+                lines[2] = "--endjoust";
+                mas.GetComponent<BaseScript>().JoustDialogueStart();
+            }
+            else if (mas.GetComponent<BaseScript>().countNPC == 1 && lines[0].Equals("--joust"))
+            {
+                lines[0] = "NPC1 joust";
+                lines[1] = "NPC1 joust 2";
+                lines[2] = "--endjoust";
+                mas.GetComponent<BaseScript>().JoustDialogueStart();
+            }
+            else if (mas.GetComponent<BaseScript>().countNPC == 2 && lines[0].Equals("--joust"))
+            {
+                lines[0] = "NPC2 joust";
+                lines[1] = "NPC2 joust 2";
+                lines[2] = "--endjoust";
+                mas.GetComponent<BaseScript>().JoustDialogueStart();
             }
             DisplayText(lines[0]);
         }
@@ -112,7 +132,8 @@ public class TextManager : MonoBehaviour
                 {
                     button1.SetActive(true);
                     button2.SetActive(true);
-                } else if(lines[textIndex] == "--menu")
+                }
+                else if (lines[textIndex] == "--menu")
                 {
                     GameObject mas = GameObject.Find("MasterObject");
                     mas.GetComponent<BaseScript>().reset();
@@ -123,10 +144,15 @@ public class TextManager : MonoBehaviour
                     DisplayText(lines[textIndex]);
                 }
             }
-            else
+            else if (lines[textIndex - 1] != "The game needs to end!" || lines[textIndex - 1] != "--endjoust")
             {
                 GameObject mas = GameObject.Find("MasterObject");
                 mas.GetComponent<BaseScript>().NextLevel(nextScene);
+            }
+            else if (lines[textIndex - 1] == "--endjoust")
+            {
+                GameObject mas = GameObject.Find("MasterObject");
+                mas.GetComponent<BaseScript>().JoustDialogueEnd();
             }
         }
     }
@@ -155,7 +181,7 @@ public class TextManager : MonoBehaviour
         }
         textInMotion = false;
     }
-
+        
     public void GoodOptionPicked() {
         GameObject mas = GameObject.Find("MasterObject");
         mas.GetComponent<BaseScript>().currentNPC.goodDialogue();
@@ -170,7 +196,9 @@ public class TextManager : MonoBehaviour
 
     public void Questions(int npc)
     {
-        if(npc == 0)
+        GameObject mas = GameObject.Find("MasterObject");
+        PlayerAnswers(mas.GetComponent<BaseScript>().countNPC);
+        if (npc == 0)
         {
             lines[3] = "NPC0 question 1";
             lines[6] = "NPC0 question 2";
@@ -194,14 +222,17 @@ public class TextManager : MonoBehaviour
         if (question == 0)
         {
             Response1(first);
+            question = 1;
+            PlayerAnswers(mas.GetComponent<BaseScript>().countNPC);
         } else if(question == 1)
         {
             Response2(first);
+            question = 2;
+            PlayerAnswers(mas.GetComponent<BaseScript>().countNPC);
         } else if(question == 2)
         {
             Response3(first);
         }
-        question++;
         button1.SetActive(false);
         button2.SetActive(false);
         textIndex++;
@@ -248,32 +279,32 @@ public class TextManager : MonoBehaviour
         GameObject mas = GameObject.Find("MasterObject");
         if (mas.GetComponent<BaseScript>().countNPC == 0 && first)
         {
-            lines[8] = "NPC0 response first 1";
+            lines[8] = "NPC0 response first 2";
             PlayerAnswers(0);
         }
         else if (mas.GetComponent<BaseScript>().countNPC == 0 && !first)
         {
-            lines[8] = "NPC0 response second 1";
+            lines[8] = "NPC0 response second 2";
             PlayerAnswers(0);
         }
         else if (mas.GetComponent<BaseScript>().countNPC == 1 && first)
         {
-            lines[11] = "NPC1 response first 1";
+            lines[11] = "NPC1 response first 2";
             PlayerAnswers(1);
         }
         else if (mas.GetComponent<BaseScript>().countNPC == 1 && !first)
         {
-            lines[11] = "NPC1 response second 1";
+            lines[11] = "NPC1 response second 2";
             PlayerAnswers(1);
         }
         else if (mas.GetComponent<BaseScript>().countNPC == 2 && first)
         {
-            lines[8] = "NPC2 response first 1";
+            lines[8] = "NPC2 response first 2";
             PlayerAnswers(2);
         }
         else if (mas.GetComponent<BaseScript>().countNPC == 2 && !first)
         {
-            lines[8] = "NPC2 response second 1";
+            lines[8] = "NPC2 response second 2";
             PlayerAnswers(2);
         }
     }
@@ -283,27 +314,27 @@ public class TextManager : MonoBehaviour
         GameObject mas = GameObject.Find("MasterObject");
         if (mas.GetComponent<BaseScript>().countNPC == 0 && first)
         {
-            lines[11] = "NPC0 response first 1";
+            lines[11] = "NPC0 response first 3";
         }
         else if (mas.GetComponent<BaseScript>().countNPC == 0 && !first)
         {
-            lines[11] = "NPC0 response second 1";
+            lines[11] = "NPC0 response second 3";
         }
         else if (mas.GetComponent<BaseScript>().countNPC == 1 && first)
         {
-            lines[14] = "NPC1 response first 1";
+            lines[14] = "NPC1 response first 3";
         }
         else if (mas.GetComponent<BaseScript>().countNPC == 1 && !first)
         {
-            lines[14] = "NPC1 response second 1";
+            lines[14] = "NPC1 response second 3";
         }
         else if (mas.GetComponent<BaseScript>().countNPC == 2 && first)
         {
-            lines[11] = "NPC2 response first 1";
+            lines[11] = "NPC2 response first 3";
         }
         else if (mas.GetComponent<BaseScript>().countNPC == 2 && !first)
         {
-            lines[11] = "NPC2 response second 1";
+            lines[11] = "NPC2 response second 3";
         }
     }
 
@@ -311,48 +342,48 @@ public class TextManager : MonoBehaviour
     {
         if(npc == 0 && question == 0)
         {
-            button1.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 0 option first question 0";
-            button2.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 0 option second question 0";
+            button1.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 0 option first question 1";
+            button2.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 0 option second question 1";
         }
         else if(npc == 0 && question == 1)
         {
-            button1.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 0 option first question 1";
-            button2.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 0 option first question 1";
+            button1.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 0 option first question 2";
+            button2.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 0 option second question 2";
         }
         else if (npc == 0 && question == 2)
         {
-            button1.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 0 option first question 2";
-            button2.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 0 option first question 2";
+            button1.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 0 option first question 3";
+            button2.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 0 option second question 3";
         }
         else if (npc == 1 && question == 0)
         {
-            button1.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 1 option first question 0";
-            button2.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 1 option second question 0";
+            button1.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 1 option first question 1";
+            button2.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 1 option second question 1";
         }
         else if (npc == 1 && question == 1)
         {
-            button1.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 1 option first question 1";
-            button2.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 1 option first question 1";
+            button1.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 1 option first question 2";
+            button2.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 1 option second question 2";
         }
         else if (npc == 1 && question == 2)
         {
-            button1.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 1 option first question 2";
-            button2.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 1 option first question 2";
+            button1.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 1 option first question 3";
+            button2.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 1 option second question 3";
         }
         else if (npc == 2 && question == 0)
         {
-            button1.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 2 option first question 0";
-            button2.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 2 option second question 0";
+            button1.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 2 option first question 1";
+            button2.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 2 option second question 1";
         }
         else if (npc == 2 && question == 1)
         {
-            button1.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 2 option first question 1";
-            button2.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 2 option first question 1";
+            button1.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 2 option first question 2";
+            button2.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 2 option second question 2";
         }
         else if (npc == 2 && question == 2)
         {
-            button1.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 2 option first question 2";
-            button2.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 2 option first question 2";
+            button1.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 2 option first question 3";
+            button2.GetComponent<Transform>().GetChild(0).GetComponent<Text>().text = "npc 2 option second question 3";
         }
     }
 }

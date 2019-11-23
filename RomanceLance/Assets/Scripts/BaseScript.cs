@@ -9,6 +9,9 @@ public class BaseScript : MonoBehaviour
     public static Sprite currentShirt;
     public static Sprite currentSteed;
     public static Sprite currentLance;
+    public Sprite defaultShirt;
+    public Sprite defaultSteed;
+    public Sprite defaultLance;
     public int shirtNumber;
     public int steedNumber;
     public int lanceNumber;
@@ -23,9 +26,11 @@ public class BaseScript : MonoBehaviour
     public Sprite charBjoust;
     public Sprite charCsprite;
     public Sprite charCjoust;
+    public bool joustDialogue;
 
     private void Start()
     {
+        joustDialogue = false;
         countNPC = 0;
         shirtNumber = 0;
         steedNumber = 0;
@@ -39,6 +44,9 @@ public class BaseScript : MonoBehaviour
         SceneManager.LoadScene("Menu", LoadSceneMode.Additive);
         currentLevel = "Menu";
         currentNPC = CharA;
+        currentShirt = defaultShirt;
+        currentSteed = defaultSteed;
+        currentLance = defaultLance;
     }
     public NPC setNPC()
     {
@@ -100,5 +108,13 @@ public class BaseScript : MonoBehaviour
         steedNumber = 0;
         lanceNumber = 0;
         currentNPC = CharA;
+    }
+    public void JoustDialogueEnd()
+    {
+        joustDialogue = false;
+    }
+    public void JoustDialogueStart()
+    {
+        joustDialogue = true;
     }
 }

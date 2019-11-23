@@ -22,8 +22,7 @@ public class Joust : MonoBehaviour
         int shirt = mas.GetComponent<BaseScript>().shirtNumber;
         int steed = mas.GetComponent<BaseScript>().steedNumber;
         lance = mas.GetComponent<BaseScript>().lanceNumber;
-        npc.GetComponent<SpriteRenderer>().sprite =
-          mas.GetComponent<BaseScript>().currentNPC.getJSprite();
+        npc.GetComponent<SpriteRenderer>().sprite = mas.GetComponent<BaseScript>().currentNPC.getJSprite();
         mas.GetComponent<BaseScript>().currentNPC.checkChoices(shirt, steed, lance);
         hearts = mas.GetComponent<BaseScript>().currentNPC.getLoveMeter();
         StartJoust();

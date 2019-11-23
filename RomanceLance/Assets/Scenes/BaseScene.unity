@@ -149,6 +149,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9f4ab97d05a35149be5a337450174e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultShirt: {fileID: 21300000, guid: 85fb6f2c00a909a4a828a2eca89b8456, type: 3}
+  defaultSteed: {fileID: 21300000, guid: 5836ae73439e2f9489cac7371827ef27, type: 3}
+  defaultLance: {fileID: -5717278808204544605, guid: 96a7043dd5de53843b2d297dfe89b81f,
+    type: 3}
   shirtNumber: 0
   steedNumber: 0
   lanceNumber: 0
