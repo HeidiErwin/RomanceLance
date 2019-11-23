@@ -117,9 +117,10 @@ public class TextManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
+            textIndex++;
             if (button1.activeSelf)
             {
-                textIndex++;
+                
             }
             //Conditional to prevent accessing an invalid index.
             if (!(textIndex >= lines.Length))
