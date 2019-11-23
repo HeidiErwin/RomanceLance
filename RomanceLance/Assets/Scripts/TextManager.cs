@@ -117,7 +117,7 @@ public class TextManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            if (!button1.activeSelf)
+            if (button1.activeSelf)
             {
                 textIndex++;
             }
