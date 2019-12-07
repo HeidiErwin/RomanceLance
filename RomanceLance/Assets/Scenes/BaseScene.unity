@@ -153,6 +153,7 @@ MonoBehaviour:
   defaultSteed: {fileID: 21300000, guid: 5836ae73439e2f9489cac7371827ef27, type: 3}
   defaultLance: {fileID: -5717278808204544605, guid: 96a7043dd5de53843b2d297dfe89b81f,
     type: 3}
+  defaultJoustShirt: {fileID: 21300000, guid: 7dc30b58f94e7f84c9e65314a1de51b6, type: 3}
   shirtNumber: 0
   steedNumber: 0
   lanceNumber: 0
