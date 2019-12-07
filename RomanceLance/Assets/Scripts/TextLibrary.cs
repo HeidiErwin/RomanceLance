@@ -25,9 +25,4 @@ public class TextLibrary : MonoBehaviour
         dialogueSelected = 0;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

@@ -1381,15 +1381,6 @@ MonoBehaviour:
   - It is time to test thy mettle, newcomer! Micaela!
   - "Thou shalt test the extent of Lance\u2019s prowess!"
   - Don thy armor, arm thyself, and prepare thy steed.
-  - question1
-  - --break
-  - response1
-  - question2
-  - --break
-  - response2
-  - question3
-  - --break
-  - response3
 --- !u!4 &1585500055
 Transform:
   m_ObjectHideFlags: 0
