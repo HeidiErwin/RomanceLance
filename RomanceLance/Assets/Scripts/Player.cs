@@ -12,6 +12,12 @@ public class Player : MonoBehaviour
     [SerializeField] Sprite waifuShirt;
     [SerializeField] Sprite shakespearShirt;
     [SerializeField] Sprite squidwardShirt;
+    [SerializeField] Sprite joustDogShirt;
+    [SerializeField] Sprite joustHotDogShirt;
+    [SerializeField] Sprite joustPurpleShirt;
+    [SerializeField] Sprite joustWaifuShirt;
+    [SerializeField] Sprite joustShakespearShirt;
+    [SerializeField] Sprite joustSquidwardShirt;
     [SerializeField] Image steed;
     [SerializeField] Sprite horse;
     [SerializeField] Sprite razor;
@@ -40,6 +46,7 @@ public class Player : MonoBehaviour
             shirt.sprite = dogShirt;
             GameObject mas = GameObject.Find("MasterObject");
             mas.GetComponent<BaseScript>().setShirt(shirt.sprite, 0);
+            mas.GetComponent<BaseScript>().setJoustShirt(joustDogShirt);
             currentShirt = shirt.sprite;
 
         }
@@ -48,6 +55,7 @@ public class Player : MonoBehaviour
             shirt.sprite = hotDogShirt;
             GameObject mas = GameObject.Find("MasterObject");
             mas.GetComponent<BaseScript>().setShirt(shirt.sprite, 1);
+            mas.GetComponent<BaseScript>().setJoustShirt(joustHotDogShirt);
             currentShirt = shirt.sprite;
 
         }
@@ -56,6 +64,7 @@ public class Player : MonoBehaviour
             shirt.sprite = purpleShirt;
             GameObject mas = GameObject.Find("MasterObject");
             mas.GetComponent<BaseScript>().setShirt(shirt.sprite, 2);
+            mas.GetComponent<BaseScript>().setJoustShirt(joustPurpleShirt);
             currentShirt = shirt.sprite;
         }
         if (index == 3)
@@ -63,6 +72,7 @@ public class Player : MonoBehaviour
             shirt.sprite = waifuShirt;
             GameObject mas = GameObject.Find("MasterObject");
             mas.GetComponent<BaseScript>().setShirt(shirt.sprite, 3);
+            mas.GetComponent<BaseScript>().setJoustShirt(joustWaifuShirt);
             currentShirt = shirt.sprite;
         }
         if (index == 4)
@@ -70,6 +80,7 @@ public class Player : MonoBehaviour
             shirt.sprite = shakespearShirt;
             GameObject mas = GameObject.Find("MasterObject");
             mas.GetComponent<BaseScript>().setShirt(shirt.sprite, 4);
+            mas.GetComponent<BaseScript>().setJoustShirt(joustShakespearShirt);
             currentShirt = shirt.sprite;
         }
         if (index == 5)
@@ -77,6 +88,7 @@ public class Player : MonoBehaviour
             shirt.sprite = squidwardShirt;
             GameObject mas = GameObject.Find("MasterObject");
             mas.GetComponent<BaseScript>().setShirt(shirt.sprite, 5);
+            mas.GetComponent<BaseScript>().setJoustShirt(joustSquidwardShirt);
             currentShirt = shirt.sprite;
         }
 

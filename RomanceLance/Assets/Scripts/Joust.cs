@@ -26,9 +26,9 @@ public class Joust : MonoBehaviour
         mas.GetComponent<BaseScript>().currentNPC.checkChoices(shirt, steed, lance);
         hearts = mas.GetComponent<BaseScript>().currentNPC.getLoveMeter();
         StartJoust();
-        player.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = BaseScript.currentShirt;
-        player.transform.GetChild(1).gameObject.GetComponent<SpriteRenderer>().sprite = BaseScript.currentSteed;
-        player.transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().sprite = BaseScript.currentLance;
+        player.gameObject.GetComponent<SpriteRenderer>().sprite = BaseScript.currentJoustShirt;
+        player.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = BaseScript.currentSteed;
+        player.transform.GetChild(1).gameObject.GetComponent<SpriteRenderer>().sprite = BaseScript.currentLance;
     }
 
     public void StartJoust() {

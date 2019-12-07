@@ -9,9 +9,11 @@ public class BaseScript : MonoBehaviour
     public static Sprite currentShirt;
     public static Sprite currentSteed;
     public static Sprite currentLance;
+    public static Sprite currentJoustShirt;
     public Sprite defaultShirt;
     public Sprite defaultSteed;
     public Sprite defaultLance;
+    public Sprite defaultJoustShirt;
     public int shirtNumber;
     public int steedNumber;
     public int lanceNumber;
@@ -45,6 +47,7 @@ public class BaseScript : MonoBehaviour
         currentShirt = defaultShirt;
         currentSteed = defaultSteed;
         currentLance = defaultLance;
+        currentJoustShirt = defaultJoustShirt;
     }
     public NPC setNPC()
     {
@@ -95,6 +98,10 @@ public class BaseScript : MonoBehaviour
     {
         currentLance = myLance;
         lanceNumber = numLance;
+    }
+    public void setJoustShirt(Sprite myJoustShirt)
+    {
+        currentJoustShirt = myJoustShirt;
     }
     public void reset()
     {

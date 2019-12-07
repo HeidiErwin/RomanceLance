@@ -3934,6 +3934,14 @@ MonoBehaviour:
   waifuShirt: {fileID: 21300000, guid: 43ae58f574156e143980d595eee17ee7, type: 3}
   shakespearShirt: {fileID: 21300000, guid: 148323f183648ca41b7c0946ce737b2b, type: 3}
   squidwardShirt: {fileID: 21300000, guid: 2f04bdbb9a14c404fb2bbfbe0f386060, type: 3}
+  joustDogShirt: {fileID: 21300000, guid: 7dc30b58f94e7f84c9e65314a1de51b6, type: 3}
+  joustHotDogShirt: {fileID: 21300000, guid: 4009c7f9fe11fc949bd71bf4902da8a4, type: 3}
+  joustPurpleShirt: {fileID: 21300000, guid: e460c9df815bb874c90b3273e3665cf3, type: 3}
+  joustWaifuShirt: {fileID: 21300000, guid: 3b0f4966c34e5f34586ba6fde5c89d6b, type: 3}
+  joustShakespearShirt: {fileID: 21300000, guid: 3b0f4966c34e5f34586ba6fde5c89d6b,
+    type: 3}
+  joustSquidwardShirt: {fileID: 21300000, guid: d3740b6fa9402834a895484154928224,
+    type: 3}
   steed: {fileID: 829123223}
   horse: {fileID: 21300000, guid: 5836ae73439e2f9489cac7371827ef27, type: 3}
   razor: {fileID: 21300000, guid: 3c60e09e100b9dd4ba9eea5ed6218358, type: 3}
