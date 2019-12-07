@@ -3930,7 +3930,7 @@ MonoBehaviour:
   shirt: {fileID: 1687076913}
   dogShirt: {fileID: 21300000, guid: 85fb6f2c00a909a4a828a2eca89b8456, type: 3}
   hotDogShirt: {fileID: 21300000, guid: 3ad0aecc8bbe52144939e0048519499e, type: 3}
-  purpleShirt: {fileID: 21300000, guid: 2f04bdbb9a14c404fb2bbfbe0f386060, type: 3}
+  purpleShirt: {fileID: 21300000, guid: 02b5f0db38a24bc46ae0be8256261e18, type: 3}
   waifuShirt: {fileID: 21300000, guid: 43ae58f574156e143980d595eee17ee7, type: 3}
   shakespearShirt: {fileID: 21300000, guid: 148323f183648ca41b7c0946ce737b2b, type: 3}
   squidwardShirt: {fileID: 21300000, guid: 2f04bdbb9a14c404fb2bbfbe0f386060, type: 3}
@@ -4416,7 +4416,8 @@ MonoBehaviour:
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 8300000, guid: f1395d4aa6a08db4ebd06c414f5e6a08,
+            type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
