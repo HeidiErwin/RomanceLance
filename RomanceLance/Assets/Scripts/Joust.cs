@@ -11,7 +11,6 @@ public class Joust : MonoBehaviour
     [SerializeField] GameObject npc;
     private int hearts;
     private int lance;
-    public string nextScene;
 
     private float runTime = 2.5f; // how long it takes the characters to run across the screen
 
@@ -92,8 +91,16 @@ public class Joust : MonoBehaviour
     {
         yield return new WaitForSeconds(runTime);
         GameObject mas = GameObject.Find("MasterObject");
-        mas.GetComponent<BaseScript>().NextLevel(
-            mas.GetComponent<BaseScript>().currentNPC.getName() + "Dialog");
+        BaseScript bs = mas.GetComponent<BaseScript>();
+        string nextSceneName = "";
+        if (bs.countNPC == 0) {
+            nextSceneName = "CharADialog";
+        } else if (bs.countNPC == 1) {
+            nextSceneName = "CharBDialog";
+        } else if (bs.countNPC == 2) {
+            nextSceneName = "CharCDialog";
+        }
+        bs.NextLevel(nextSceneName);
     }
 
     public void ShowIntenseEyes() {

@@ -81,6 +81,9 @@ public class NPC : MonoBehaviour
     {
         //loveMeter += 1;
     }
+    public void badDialogue() {
+        //loveMeter += 1;
+    }
     public bool hasLost()
     {
         return isDefeated;

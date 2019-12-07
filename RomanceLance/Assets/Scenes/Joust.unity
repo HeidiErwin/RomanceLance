@@ -903,7 +903,6 @@ MonoBehaviour:
   intenseEyes: {fileID: 1673103372}
   player: {fileID: 902218727}
   npc: {fileID: 1644366688}
-  nextScene: 
   charactersMoving: 0
 --- !u!1 &737897638
 GameObject:

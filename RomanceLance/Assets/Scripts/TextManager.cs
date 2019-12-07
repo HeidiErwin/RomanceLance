@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TextManager : MonoBehaviour
 {
@@ -93,9 +94,8 @@ public class TextManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return) && lines.Length != 1) 
+        if (!button1.activeSelf && Input.GetKeyDown(KeyCode.Return) && SceneManager.GetSceneAt(1).name != "Joust") 
          {
-    
                textIndex++;
 
             //Conditional to prevent accessing an invalid index.
@@ -121,8 +121,8 @@ public class TextManager : MonoBehaviour
                     DisplayText(lines[textIndex]);
                 }
             }
-            else if(lines[textIndex-1] != "The game needs to end!")
-            {
+            else if (SceneManager.GetSceneAt(1).name != "AskScene") //if(lines[textIndex-1] != "The game needs to end!")
+             {
                 GameObject mas = GameObject.Find("MasterObject");
                 mas.GetComponent<BaseScript>().NextLevel(nextScene);
             }
@@ -163,6 +163,7 @@ public class TextManager : MonoBehaviour
     public void BadOptionPicked()
     {
         GameObject mas = GameObject.Find("MasterObject");
+        mas.GetComponent<BaseScript>().currentNPC.badDialogue();
         mas.GetComponent<BaseScript>().incrementNPC();
     }
     
