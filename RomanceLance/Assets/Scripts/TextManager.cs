@@ -131,7 +131,8 @@ public class TextManager : MonoBehaviour
                     lines[0] = "S-so beautiful!";
                 }
             }
-            DisplayText(lines[0]);
+            txt.text = lines[0];
+            //DisplayText(lines[0]);
         }
     
     }
@@ -162,7 +163,8 @@ public class TextManager : MonoBehaviour
                 }
                 else
                 {
-                    DisplayText(lines[textIndex]);
+                    txt.text = lines[textIndex];
+                    //DisplayText(lines[textIndex]);
                 }
             }
             else if (SceneManager.GetSceneAt(1).name != "AskScene") //if(lines[textIndex-1] != "The game needs to end!")
@@ -183,20 +185,20 @@ public class TextManager : MonoBehaviour
         button2.SetActive(false);
     }
 
-    public void DisplayText(string sentence) {
-        StopAllCoroutines(); // to ensure we don't keep animating old sentence if user moves on
-        StartCoroutine(TypeSentence(sentence));
-    }
+    //public void DisplayText(string sentence) {
+    //    StopAllCoroutines(); // to ensure we don't keep animating old sentence if user moves on
+    //    StartCoroutine(TypeSentence(sentence));
+    //}
 
-    IEnumerator TypeSentence(string sentence) {
-        textInMotion = true;
-        txt.text = "";
-        foreach (char letter in sentence.ToCharArray()) {
-            txt.text += letter;
-            yield return null; // wait until next frame before continuing execution
-        }
-        textInMotion = false;
-    }
+    //IEnumerator TypeSentence(string sentence) {
+    //    textInMotion = true;
+    //    txt.text = "";
+    //    foreach (char letter in sentence.ToCharArray()) {
+    //        txt.text += letter;
+    //        yield return null; // wait until next frame before continuing execution
+    //    }
+    //    textInMotion = false;
+    //}
         
     public void GoodOptionPicked() {
         GameObject mas = GameObject.Find("MasterObject");
