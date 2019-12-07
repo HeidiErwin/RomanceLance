@@ -103,6 +103,13 @@ public class BaseScript : MonoBehaviour
     {
         currentJoustShirt = myJoustShirt;
     }
+    public void PrepReset()
+    {
+        setShirt(defaultShirt, 0);
+        setSteed(defaultSteed, 0);
+        setLance(defaultLance, 0);
+        setJoustShirt(defaultJoustShirt);
+    }
     public void reset()
     {
         CharA.reset();

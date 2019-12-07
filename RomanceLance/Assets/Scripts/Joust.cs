@@ -100,6 +100,7 @@ public class Joust : MonoBehaviour
         } else if (bs.countNPC == 2) {
             nextSceneName = "CharCDialog";
         }
+        mas.GetComponent<BaseScript>().PrepReset();
         bs.NextLevel(nextSceneName);
     }
 
