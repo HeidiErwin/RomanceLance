@@ -77,15 +77,59 @@ public class TextManager : MonoBehaviour
             // WHAT THEY SAY DURING THE JOUST
             else if (mas.GetComponent<BaseScript>().countNPC == 0 && lines[0].Equals("--joust")) // this depends on outfit
             {
-                lines[0] = "U UGLY";
+                if (mas.GetComponent<BaseScript>().currentNPC.getLoveMeter() == 0) {
+                    lines[0] = "Eeeeek!";
+                }
+                if (mas.GetComponent<BaseScript>().currentNPC.getLoveMeter() == 1)
+                {
+                    lines[0] = "Woah!";
+                }
+                if (mas.GetComponent<BaseScript>().currentNPC.getLoveMeter() == 2)
+                {
+                    lines[0] = "H-huh?";
+                }
+                if (mas.GetComponent<BaseScript>().currentNPC.getLoveMeter() == 3)
+                {
+                    lines[0] = "P-pretty!";
+                }
             }
             else if (mas.GetComponent<BaseScript>().countNPC == 1 && lines[0].Equals("--joust"))
             {
-                lines[0] = "U HOT";
+                if (mas.GetComponent<BaseScript>().currentNPC.getLoveMeter() == 0)
+                {
+                    lines[0] = "U UGLY";
+                }
+                if (mas.GetComponent<BaseScript>().currentNPC.getLoveMeter() == 1)
+                {
+                    lines[0] = "U AIGHT";
+                }
+                if (mas.GetComponent<BaseScript>().currentNPC.getLoveMeter() == 2)
+                {
+                    lines[0] = "U PURDY";
+                }
+                if (mas.GetComponent<BaseScript>().currentNPC.getLoveMeter() == 3)
+                {
+                    lines[0] = "Hey there ;)))";
+                }
             }
             else if (mas.GetComponent<BaseScript>().countNPC == 2 && lines[0].Equals("--joust"))
             {
-                lines[0] = "U OK I GUESS";
+                if (mas.GetComponent<BaseScript>().currentNPC.getLoveMeter() == 0)
+                {
+                    lines[0] = "Taste the minty freshness of my steel!";
+                }
+                if (mas.GetComponent<BaseScript>().currentNPC.getLoveMeter() == 1)
+                {
+                    lines[0] = "Away with thee!";
+                }
+                if (mas.GetComponent<BaseScript>().currentNPC.getLoveMeter() == 2)
+                {
+                    lines[0] = "Nani?!";
+                }
+                if (mas.GetComponent<BaseScript>().currentNPC.getLoveMeter() == 3)
+                {
+                    lines[0] = "S-so beautiful!";
+                }
             }
             DisplayText(lines[0]);
         }
