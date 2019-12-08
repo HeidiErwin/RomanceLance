@@ -237,7 +237,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 1
       - m_Target: {fileID: 1158711367}
-        m_MethodName: BadOptionPicked
+        m_MethodName: GoodOptionPicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1239,7 +1239,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 1
       - m_Target: {fileID: 1158711367}
-        m_MethodName: GoodOptionPicked
+        m_MethodName: BadOptionPicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

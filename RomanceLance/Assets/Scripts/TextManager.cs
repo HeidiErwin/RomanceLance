@@ -57,18 +57,18 @@ public class TextManager : MonoBehaviour
                 else
                 {
                     lines[0] = "A predictable result.";
-                    lines[1] = " Thou needest no less than ten further years of training before I am within thy reach.";
+                    lines[1] = "Thou needest no less than ten further years of training before I am within thy reach.";
                     lines[2] = "To be or not to be: that is the question…";
                     lines[3] = "--break";
                 }
             }
-            else if (lines[0].Equals("final") && mas.GetComponent<BaseScript>().setNPC().getLoveMeter() >= 3)
+            else if (lines[0].Equals("final") && mas.GetComponent<BaseScript>().currentNPC.CanDate())
             {
-                lines[0] = "I love you!";
+                lines[0] = "I love you, too!";
                 lines[1] = "It was meant to be!";
                 lines[2] = "--menu";
             }
-            else if (lines[0].Equals("final") && mas.GetComponent<BaseScript>().setNPC().getLoveMeter() < 3)
+            else if (lines[0].Equals("final") && !mas.GetComponent<BaseScript>().currentNPC.CanDate())
             {
                 lines[0] = "I don't like you in that way...";
                 lines[1] = "--menu";
@@ -97,15 +97,15 @@ public class TextManager : MonoBehaviour
             {
                 if (mas.GetComponent<BaseScript>().currentNPC.getLoveMeter() == 0)
                 {
-                    lines[0] = "U UGLY";
+                    lines[0] = "YA UGLY";
                 }
                 if (mas.GetComponent<BaseScript>().currentNPC.getLoveMeter() == 1)
                 {
-                    lines[0] = "U AIGHT";
+                    lines[0] = "YOU AIGHT";
                 }
                 if (mas.GetComponent<BaseScript>().currentNPC.getLoveMeter() == 2)
                 {
-                    lines[0] = "U PURDY";
+                    lines[0] = "YOU PURDY";
                 }
                 if (mas.GetComponent<BaseScript>().currentNPC.getLoveMeter() == 3)
                 {
@@ -202,7 +202,9 @@ public class TextManager : MonoBehaviour
         
     public void GoodOptionPicked() {
         GameObject mas = GameObject.Find("MasterObject");
+        Debug.Log("good option picked for!" + mas.GetComponent<BaseScript>().currentNPC.charName);
         mas.GetComponent<BaseScript>().currentNPC.goodDialogue();
+
         mas.GetComponent<BaseScript>().incrementNPC();
     }
 

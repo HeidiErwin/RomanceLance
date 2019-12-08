@@ -35,12 +35,12 @@ public class BaseScript : MonoBehaviour
         shirtNumber = 0;
         steedNumber = 0;
         lanceNumber = 0;
-        //No name yet
-        CharA = new NPC("CharA", 0, 0, 0, charAsprite, charAjoust);
-        //Della
-        CharB = new NPC("CharB", 1, 1, 1, charBsprite, charBjoust);
-        //Cyrille
-        CharC = new NPC("CharC", 2, 2, 2, charCsprite, charCjoust);
+        //Evan: likes dog shirt + chair (basic boi) + basic sword
+        CharA = new NPC("CharA", 0, 4, 3, charAsprite, charAjoust);
+        //Della: likes bowling shirt (competitive) + skateboard + excalibur
+        CharB = new NPC("CharB", 2, 3, 5, charBsprite, charBjoust);
+        //Morgan: likes Shookspeare shirt + miniature mike + bouquet (romantic)
+        CharC = new NPC("CharC", 4, 0, 4, charCsprite, charCjoust);
         SceneManager.LoadScene("Menu", LoadSceneMode.Additive);
         currentLevel = "Menu";
         currentNPC = CharA;
@@ -70,6 +70,7 @@ public class BaseScript : MonoBehaviour
         if (countNPC < 3)
         {
             countNPC++;
+            
             currentNPC = setNPC();
         }
         else

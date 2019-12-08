@@ -30,6 +30,7 @@ public class Joust : MonoBehaviour
         npc.GetComponent<SpriteRenderer>().sprite = mas.GetComponent<BaseScript>().currentNPC.getJSprite();
         BaseScript bs = mas.GetComponent<BaseScript>();
         bs.currentNPC.checkChoices(shirt, steed, lance);
+        Debug.Log("current npsee is " + bs.currentNPC.charName);
         hearts = mas.GetComponent<BaseScript>().currentNPC.getLoveMeter();
         if(bs.countNPC == 0) {
             intenseEyes.sprite = evanEyes;

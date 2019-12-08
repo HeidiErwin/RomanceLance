@@ -11,8 +11,7 @@ public class NPC : MonoBehaviour
     private bool favoriteShirtGuessed;
     private bool favoriteSteedGuessed;
     private bool favoriteLanceGuessed;
-    private string charName;
-    private bool canDate;
+    public string charName;
     private Sprite sprite;
     private Sprite joustsprite;
     private bool isDefeated;
@@ -21,7 +20,6 @@ public class NPC : MonoBehaviour
         Sprite joustappear)
     {
         isDefeated = false;
-        canDate = false;
         loveMeter = 0;
         this.charName = theName;
         this.favoriteShirt = favShirt;
@@ -39,7 +37,6 @@ public class NPC : MonoBehaviour
         favoriteSteedGuessed = false;
         favoriteLanceGuessed = false;
         loveMeter = 0;
-        canDate = false;
     }
     public string getName()
     {
@@ -79,7 +76,7 @@ public class NPC : MonoBehaviour
     }
     public void goodDialogue()
     {
-        //loveMeter += 1;
+        loveMeter += 1;
     }
     public void badDialogue() {
         //loveMeter += 1;
@@ -97,17 +94,6 @@ public class NPC : MonoBehaviour
         return loveMeter;
     }
 
-    void Update()
-    {
-        if (loveMeter > 4)
-        {
-            canDate = true;
-        }
-        else
-        {
-            canDate = false;
-        }
-    }
     public void checkChoices(int shirt, int steed, int lance)
     {
         if(shirt == favoriteShirt)
@@ -125,6 +111,6 @@ public class NPC : MonoBehaviour
     }
 
     public bool CanDate() {
-        return canDate;
+        return (loveMeter >= 3);
     }
 }
