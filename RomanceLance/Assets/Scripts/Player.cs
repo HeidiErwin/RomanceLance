@@ -20,11 +20,11 @@ public class Player : MonoBehaviour
     [SerializeField] Sprite joustSquidwardShirt;
     [SerializeField] Image steed;
     [SerializeField] Sprite horse;
-    [SerializeField] Sprite razor;
+    [SerializeField] Sprite roomba;
+    [SerializeField] Sprite skates;
     [SerializeField] Sprite skateboard;
-    [SerializeField] Sprite limescooter;
-    [SerializeField] Sprite crocs;
-    [SerializeField] Sprite pattyMobile;
+    [SerializeField] Sprite chair;
+    [SerializeField] Sprite unicycle;
     [SerializeField] Image lance;
     [SerializeField] Sprite lance1;
     [SerializeField] Sprite lance2;
@@ -150,7 +150,7 @@ public class Player : MonoBehaviour
         {
             Vector3 position = steed.rectTransform.position;
             position = position + 5 * Vector3.up;
-            steed.sprite = razor;
+            steed.sprite = roomba;
             GameObject mas = GameObject.Find("MasterObject");
             mas.GetComponent<BaseScript>().setSteed(steed.sprite, 1);
             currentSteed = steed.sprite;
@@ -158,28 +158,28 @@ public class Player : MonoBehaviour
         }
         if (index == 2)
         {
-            steed.sprite = skateboard;
+            steed.sprite = skates;
             GameObject mas = GameObject.Find("MasterObject");
             mas.GetComponent<BaseScript>().setSteed(steed.sprite, 2);
             currentSteed = steed.sprite;
         }
         if (index == 3)
         {
-            steed.sprite = crocs;
+            steed.sprite = skateboard;
             GameObject mas = GameObject.Find("MasterObject");
             mas.GetComponent<BaseScript>().setSteed(steed.sprite, 3);
             currentSteed = steed.sprite;
         }
         if (index == 4)
         {
-            steed.sprite = limescooter;
+            steed.sprite = chair;
             GameObject mas = GameObject.Find("MasterObject");
             mas.GetComponent<BaseScript>().setSteed(steed.sprite, 4);
             currentSteed = steed.sprite;
         }
         if (index == 5)
         {
-            steed.sprite = pattyMobile;
+            steed.sprite = unicycle;
             GameObject mas = GameObject.Find("MasterObject");
             mas.GetComponent<BaseScript>().setSteed(steed.sprite, 5);
             currentSteed = steed.sprite;

@@ -96,6 +96,7 @@ public class NPC : MonoBehaviour
     {
         return loveMeter;
     }
+
     void Update()
     {
         if (loveMeter > 4)
@@ -121,5 +122,9 @@ public class NPC : MonoBehaviour
         {
             lanceGuessed();
         }
+    }
+
+    public bool CanDate() {
+        return canDate;
     }
 }
