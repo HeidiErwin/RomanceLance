@@ -20,6 +20,7 @@ public class CharacterAppearance : MonoBehaviour
         //NPC npcScript = bs.currentNPC.GetComponent<NPC>();
         if (bs.countNPC == 0 && bs.CharA.CanDate()) { //Evan accepts
             evanBlush.SetActive(true);
+            Debug.Log("evan said yes!");
         } 
         else if (bs.countNPC == 0 && !bs.CharA.CanDate()) { //Evan rejects
             evanSad.SetActive(true);

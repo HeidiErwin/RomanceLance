@@ -7,8 +7,14 @@ using UnityEngine.UI;
 public class Joust : MonoBehaviour
 {
     [SerializeField] Image intenseEyes;
+    [SerializeField] GameObject ui;
     [SerializeField] GameObject player;
     [SerializeField] GameObject npc;
+    [SerializeField] Animation shingAnim;
+    [SerializeField] Sprite evanEyes;
+    [SerializeField] Sprite dellaEyes;
+    [SerializeField] Sprite morganEyes;
+
     private int hearts;
     private int lance;
 
@@ -22,8 +28,16 @@ public class Joust : MonoBehaviour
         int steed = mas.GetComponent<BaseScript>().steedNumber;
         lance = mas.GetComponent<BaseScript>().lanceNumber;
         npc.GetComponent<SpriteRenderer>().sprite = mas.GetComponent<BaseScript>().currentNPC.getJSprite();
-        mas.GetComponent<BaseScript>().currentNPC.checkChoices(shirt, steed, lance);
+        BaseScript bs = mas.GetComponent<BaseScript>();
+        bs.currentNPC.checkChoices(shirt, steed, lance);
         hearts = mas.GetComponent<BaseScript>().currentNPC.getLoveMeter();
+        if(bs.countNPC == 0) {
+            intenseEyes.sprite = evanEyes;
+        } else if (bs.countNPC == 1) {
+            intenseEyes.sprite = dellaEyes;
+        } else if (bs.countNPC == 2) {
+            intenseEyes.sprite = morganEyes;
+        }
         StartJoust();
         player.gameObject.GetComponent<SpriteRenderer>().sprite = BaseScript.currentJoustShirt;
         player.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = BaseScript.currentSteed;
@@ -57,10 +71,10 @@ public class Joust : MonoBehaviour
 
     IEnumerator WaitThenRunSecondHalf() {
         yield return new WaitForSeconds(2.5f);
-        ShowIntenseEyes();
+        ShowHeartsAndText();
         GameObject mas = GameObject.Find("MasterObject");
         yield return new WaitForSeconds(5f);
-        HideIntenseEyes();
+        HideHeartsAndText();
         RunSecondHalf();
     }
 
@@ -104,20 +118,21 @@ public class Joust : MonoBehaviour
         bs.NextLevel(nextSceneName);
     }
 
-    public void ShowIntenseEyes() {
-        intenseEyes.gameObject.SetActive(true);
+    public void ShowHeartsAndText() {
+        ui.gameObject.SetActive(true);
         for(int i = 0; i<3; i++)
         {
-            intenseEyes.transform.GetChild(0).transform.GetChild(i).gameObject.SetActive(false);
+            ui.transform.GetChild(0).transform.GetChild(i).gameObject.SetActive(false);
         }
         for(int i = 0; i<hearts; i++)
         {
-            intenseEyes.transform.GetChild(0).transform.GetChild(i).gameObject.SetActive(true);
+            ui.transform.GetChild(0).transform.GetChild(i).gameObject.SetActive(true);
         }
+        shingAnim.Play();
     }
 
-    public void HideIntenseEyes() {
-        intenseEyes.gameObject.SetActive(false);
+    public void HideHeartsAndText() {
+        ui.gameObject.SetActive(false);
     }
 
     public IEnumerator MoveToPosition(Transform transform, Vector3 position, float timeToMove) {
