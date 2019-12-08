@@ -10,10 +10,13 @@ public class BaseScript : MonoBehaviour
     public static Sprite currentSteed;
     public static Sprite currentLance;
     public static Sprite currentJoustShirt;
+    public static Sprite currentJoustSteed;
+
     public Sprite defaultShirt;
     public Sprite defaultSteed;
     public Sprite defaultLance;
     public Sprite defaultJoustShirt;
+    public Sprite defaultJoustSteed;
     public int shirtNumber;
     public int steedNumber;
     public int lanceNumber;
@@ -24,10 +27,16 @@ public class BaseScript : MonoBehaviour
     public NPC currentNPC;
     public Sprite charAsprite;
     public Sprite charAjoust;
+    public Sprite charAhappy;
+    public Sprite charAangry;
     public Sprite charBsprite;
     public Sprite charBjoust;
+    public Sprite charBhappy;
+    public Sprite charBangry;
     public Sprite charCsprite;
     public Sprite charCjoust;
+    public Sprite charChappy;
+    public Sprite charCangry;
 
     private void Start()
     {
@@ -48,6 +57,8 @@ public class BaseScript : MonoBehaviour
         currentSteed = defaultSteed;
         currentLance = defaultLance;
         currentJoustShirt = defaultJoustShirt;
+        currentJoustSteed = defaultJoustSteed;
+
     }
     public NPC setNPC()
     {
@@ -104,12 +115,17 @@ public class BaseScript : MonoBehaviour
     {
         currentJoustShirt = myJoustShirt;
     }
+    public void SetJoustSteed(Sprite joustSteed) 
+    {
+        currentJoustSteed = joustSteed;
+    }
     public void PrepReset()
     {
         setShirt(defaultShirt, 0);
         setSteed(defaultSteed, 0);
         setLance(defaultLance, 0);
         setJoustShirt(defaultJoustShirt);
+        SetJoustSteed(defaultJoustSteed);
     }
     public void reset()
     {

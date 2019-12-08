@@ -656,7 +656,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00003194809, y: 0}
+  m_AnchoredPosition: {x: -0.000030517578, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &381780649
@@ -3949,6 +3949,12 @@ MonoBehaviour:
   skateboard: {fileID: 21300000, guid: bdb7ec9ee65da3440953926ff1433fca, type: 3}
   chair: {fileID: 21300000, guid: e12cdf9b908f13f46b097e6ac7a09ecd, type: 3}
   unicycle: {fileID: 21300000, guid: 4fff73d448d892a438627e3ed2cd7777, type: 3}
+  joustHorse: {fileID: 21300000, guid: 5836ae73439e2f9489cac7371827ef27, type: 3}
+  joustRoomba: {fileID: 21300000, guid: f84c6aa47f881e94f84c51745d1a012b, type: 3}
+  joustSkates: {fileID: 21300000, guid: e2367033bca976743bd60b959e27e323, type: 3}
+  joustSkateboard: {fileID: 21300000, guid: cf89312535e12c049908c7aa09c87646, type: 3}
+  joustChair: {fileID: 21300000, guid: 7e24d486639840f49bf2e0cc3d205202, type: 3}
+  joustUnicycle: {fileID: 21300000, guid: 1338d334de54d6a4cb1cce9bd9921c14, type: 3}
   lance: {fileID: 1732407622}
   lance1: {fileID: -5717278808204544605, guid: 96a7043dd5de53843b2d297dfe89b81f, type: 3}
   lance2: {fileID: -7197006974474058622, guid: 96a7043dd5de53843b2d297dfe89b81f, type: 3}

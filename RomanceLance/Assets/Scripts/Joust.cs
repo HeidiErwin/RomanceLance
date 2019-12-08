@@ -41,7 +41,7 @@ public class Joust : MonoBehaviour
         }
         StartJoust();
         player.gameObject.GetComponent<SpriteRenderer>().sprite = BaseScript.currentJoustShirt;
-        player.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = BaseScript.currentSteed;
+        player.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = BaseScript.currentJoustSteed;
         player.transform.GetChild(1).gameObject.GetComponent<SpriteRenderer>().sprite = BaseScript.currentLance;
     }
 
@@ -74,7 +74,7 @@ public class Joust : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
         ShowHeartsAndText();
         GameObject mas = GameObject.Find("MasterObject");
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
         HideHeartsAndText();
         RunSecondHalf();
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class TextManager : MonoBehaviour
 {
@@ -202,17 +203,42 @@ public class TextManager : MonoBehaviour
         
     public void GoodOptionPicked() {
         GameObject mas = GameObject.Find("MasterObject");
-        Debug.Log("good option picked for!" + mas.GetComponent<BaseScript>().currentNPC.charName);
-        mas.GetComponent<BaseScript>().currentNPC.goodDialogue();
+        BaseScript bs = mas.GetComponent<BaseScript>();
+        bs.currentNPC.goodDialogue();
+        GameObject.Find("Character").GetComponent<Image>().sprite = GetHappySpriteFor(bs.countNPC, true);
+        bs.incrementNPC();
+    }
 
-        mas.GetComponent<BaseScript>().incrementNPC();
+    // returns a sprite, if not happy then angry
+    private Sprite GetHappySpriteFor(int countNPC, bool happy) {
+        GameObject mas = GameObject.Find("MasterObject");
+        BaseScript bs = mas.GetComponent<BaseScript>();
+        if (happy) {
+            if (countNPC == 0) {
+                return bs.charAhappy;
+            } else if (countNPC == 1) {
+                return bs.charBhappy;
+            } else {
+                return bs.charChappy;
+            }
+        } else {
+            if (countNPC == 0) {
+                return bs.charAangry;
+            } else if (countNPC == 1) {
+                return bs.charBangry;
+            } else {
+                return bs.charCangry;
+            }
+        }
     }
 
     public void BadOptionPicked()
     {
         GameObject mas = GameObject.Find("MasterObject");
-        mas.GetComponent<BaseScript>().currentNPC.badDialogue();
-        mas.GetComponent<BaseScript>().incrementNPC();
+        BaseScript bs = mas.GetComponent<BaseScript>();
+        bs.currentNPC.badDialogue();
+        GameObject.Find("Character").GetComponent<Image>().sprite = GetHappySpriteFor(bs.countNPC, false);
+        bs.incrementNPC();
     }
     
 }

@@ -822,9 +822,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textLines:
   - Oooh! Fresh blood!
-  - "It\u2019s been way too long since the last one!"
-  - "I\u2019m Adelaide - but you can call me Della."
-  - Welcome to the meat grinder!
+  - "It\u2019s been way too long since the last one! Welcome to the meat grinder! "
+  - "I\u2019m Adelaide - but you can call me Della. I'm probably our most athletic
+    member... but maybe I'll finally have some competition!"
   - Your name's Lance, huh? So you were BORN for jousting!
   - Consider this your new home!
 --- !u!4 &1149509301

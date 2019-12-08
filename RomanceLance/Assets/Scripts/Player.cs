@@ -25,6 +25,12 @@ public class Player : MonoBehaviour
     [SerializeField] Sprite skateboard;
     [SerializeField] Sprite chair;
     [SerializeField] Sprite unicycle;
+    [SerializeField] Sprite joustHorse;
+    [SerializeField] Sprite joustRoomba;
+    [SerializeField] Sprite joustSkates;
+    [SerializeField] Sprite joustSkateboard;
+    [SerializeField] Sprite joustChair;
+    [SerializeField] Sprite joustUnicycle;
     [SerializeField] Image lance;
     [SerializeField] Sprite lance1;
     [SerializeField] Sprite lance2;
@@ -144,6 +150,7 @@ public class Player : MonoBehaviour
             steed.sprite = horse;
             GameObject mas = GameObject.Find("MasterObject");
             mas.GetComponent<BaseScript>().setSteed(steed.sprite, 0);
+            mas.GetComponent<BaseScript>().SetJoustSteed(joustHorse);
             currentSteed = steed.sprite;
         }
         if (index == 1)
@@ -153,6 +160,7 @@ public class Player : MonoBehaviour
             steed.sprite = roomba;
             GameObject mas = GameObject.Find("MasterObject");
             mas.GetComponent<BaseScript>().setSteed(steed.sprite, 1);
+            mas.GetComponent<BaseScript>().SetJoustSteed(joustRoomba);
             currentSteed = steed.sprite;
             steed.rectTransform.position = position;
         }
@@ -161,6 +169,7 @@ public class Player : MonoBehaviour
             steed.sprite = skates;
             GameObject mas = GameObject.Find("MasterObject");
             mas.GetComponent<BaseScript>().setSteed(steed.sprite, 2);
+            mas.GetComponent<BaseScript>().SetJoustSteed(joustSkates);
             currentSteed = steed.sprite;
         }
         if (index == 3)
@@ -168,6 +177,7 @@ public class Player : MonoBehaviour
             steed.sprite = skateboard;
             GameObject mas = GameObject.Find("MasterObject");
             mas.GetComponent<BaseScript>().setSteed(steed.sprite, 3);
+            mas.GetComponent<BaseScript>().SetJoustSteed(joustSkateboard);
             currentSteed = steed.sprite;
         }
         if (index == 4)
@@ -175,6 +185,7 @@ public class Player : MonoBehaviour
             steed.sprite = chair;
             GameObject mas = GameObject.Find("MasterObject");
             mas.GetComponent<BaseScript>().setSteed(steed.sprite, 4);
+            mas.GetComponent<BaseScript>().SetJoustSteed(joustChair);
             currentSteed = steed.sprite;
         }
         if (index == 5)
@@ -182,6 +193,7 @@ public class Player : MonoBehaviour
             steed.sprite = unicycle;
             GameObject mas = GameObject.Find("MasterObject");
             mas.GetComponent<BaseScript>().setSteed(steed.sprite, 5);
+            mas.GetComponent<BaseScript>().SetJoustSteed(joustUnicycle);
             currentSteed = steed.sprite;
         }
     }

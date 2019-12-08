@@ -154,6 +154,7 @@ MonoBehaviour:
   defaultLance: {fileID: -5717278808204544605, guid: 96a7043dd5de53843b2d297dfe89b81f,
     type: 3}
   defaultJoustShirt: {fileID: 21300000, guid: 7dc30b58f94e7f84c9e65314a1de51b6, type: 3}
+  defaultJoustSteed: {fileID: 21300000, guid: 5836ae73439e2f9489cac7371827ef27, type: 3}
   shirtNumber: 0
   steedNumber: 0
   lanceNumber: 0
@@ -164,10 +165,16 @@ MonoBehaviour:
   currentNPC: {fileID: 0}
   charAsprite: {fileID: 21300000, guid: 5d3c57cc32550114aab7034732d9f0d6, type: 3}
   charAjoust: {fileID: 21300000, guid: dc399e13df86e9b4d96629414a7b2d51, type: 3}
+  charAhappy: {fileID: 21300000, guid: f193228213dca4d4fa7291079cc11c7d, type: 3}
+  charAangry: {fileID: 21300000, guid: ba8912518371c5c47ae20e7dd70bb774, type: 3}
   charBsprite: {fileID: 21300000, guid: a6d18e4b95621774fa49b2ddfb0f5e26, type: 3}
   charBjoust: {fileID: 21300000, guid: f5f11ba52d1f4c645ae8f8e10e6869d7, type: 3}
+  charBhappy: {fileID: 21300000, guid: 9719b193b0ae41b47a35cf90d3afdf3c, type: 3}
+  charBangry: {fileID: 21300000, guid: 0e4710376a0a2ae47810c91ccacf55a7, type: 3}
   charCsprite: {fileID: 21300000, guid: 08f93c6728ceeca4d981125df2388e95, type: 3}
   charCjoust: {fileID: 21300000, guid: 36ccd8276062674418e35830e79dcac5, type: 3}
+  charChappy: {fileID: 21300000, guid: beda958b7abe7a846b6fc047075bdebd, type: 3}
+  charCangry: {fileID: 21300000, guid: b30894a5a160e8a4aa46152ecb05facc, type: 3}
 --- !u!4 &194460875
 Transform:
   m_ObjectHideFlags: 0
@@ -211,6 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77a90b4de34bc8e4db90f79b611e076b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charName: 
 --- !u!4 &1770152356
 Transform:
   m_ObjectHideFlags: 0

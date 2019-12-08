@@ -9,8 +9,6 @@ public class CharacterSelectAskOut : MonoBehaviour
 
         Debug.Log(mas.GetComponent<BaseScript>().CharA.getLoveMeter() + " is his love meter");
         Debug.Log(mas.GetComponent<BaseScript>().CharB.getLoveMeter() + " is her love meter");
-        Debug.Log(mas.GetComponent<BaseScript>().CharC.getLoveMeter() + " is their love meter");
-
     }
 
     public void SelectCharacter(int num)
